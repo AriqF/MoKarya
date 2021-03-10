@@ -9,7 +9,7 @@ require_once 'config/constants.php';
 
 // Create the Transport
 $transport = (new Swift_SmtpTransport('smtp.gmail.com', 465, 'ssl'))
-  ->setUsername("mokaryad4@gmail.com")
+  ->setUsername("noreplymokaryad4@gmail.com")
   ->setPassword("mokarya.123");
 
 // Create the Mailer using your created Transport
@@ -44,7 +44,7 @@ function SendVerificationEmail($userEmail, $token)
 
     // Create a message
     $message = (new Swift_Message('Verifikasi Email anda'))
-    ->setFrom("mokaryad4@gmail.com")
+    ->setFrom("noreplymokaryad4@gmail.com")
     ->setTo($userEmail)
     ->setBody($body, 'text/html');
 
@@ -82,7 +82,7 @@ function SendPasswordResetLink($userEmail, $token)
 
     // Create a message
     $message = (new Swift_Message('Permintaan reset password'))
-    ->setFrom("mokaryad4@gmail.com.com")
+    ->setFrom("noreplymokaryad4@gmail.com.com")
     ->setTo($userEmail)
     ->setBody($body, 'text/html');
 
