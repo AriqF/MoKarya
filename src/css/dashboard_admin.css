@@ -1,0 +1,18 @@
+body, html{
+    height: 100%;
+    scroll-behavior: smooth;
+    background-color: #2e313c;
+}
+.navbar{
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.3);
+    z-index: 5;
+    width: 100%;
+}
+.nav-item{
+    font-size: 18px;
+    margin: auto 6px;
+    font-family: Helvetica;
+}
+a i{
+    font-size: 16px;
+}
