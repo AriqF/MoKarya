@@ -50,7 +50,7 @@
                     <a class="nav-link" href="User_Regist/profile_admin.php"><i class="fas fa-id-card"></i> Profile</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="User_Regist/users_admin.php"><i class="fas fa-users"></i> Users</a>
+                    <a class="nav-link" href="User_Regist/users_admin.php"><i class="fas fa-users"></i> Members</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="User_Regist/gallery_admin.php"><i class="fas fa-images"></i> Gallery</a>
