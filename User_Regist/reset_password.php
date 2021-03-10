@@ -1,39 +1,80 @@
 <?php require_once 'controllers/authController.php'; ?>
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Reset Password</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
+    <head>
+        <title>MoKarya || Reset Password</title>
+         <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+      
+        <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        
+        <!--Swiper JS-->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
-<form class="form" action="reset_password.php" method="post">
-    <h1>R E S E T &nbsp; Y O U R <br> P A S S W O R D</h1>
+        <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-	   <?php if (count($errors) > 0): ?>
-                 <div class="alert alert-danger">
-                    <?php foreach($errors as $error): ?>
-                    <li><?php echo $error; ?></li>
-                    <?php endforeach; ?>
-                 </div>
-		<?php endif; ?>
-		<br>
-        <br>
- 	  <div class="form-field">
- 	  	  <label>Password</label>
- 	  	  <input type="password" name="password" class="input">
- 	  	  <div class="border-line">
- 	  	  </div>
- 	  </div>
-       <div class="form-field">
- 	  	  <label>Password Confirm</label>
- 	  	  <input type="password" name="passwordConf" class="input">
- 	  	  <div class="border-line">
- 	  	  </div>
- 	  </div>
- 	  <div class="form-field">
-			 <button type="submit" class="button" style="font-family: 'Ubuntu', sans-serif; font-size: 15px;" name="reset-password-btn">
-             R E S E T &nbsp; P A S S W O R D</button>
-	   </div>
- </form>
+        <!--My css-->
+        <link href="../src/css/registerStyle.css" type="text/css" rel="stylesheet"> 
+
+        <!--Swiper.js-->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+         
+        <!--Google Fonts-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Epilogue&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <form form class="form" action="reset_password.php" method="post">
+        <div class="content">
+            <div class="container" id="box" style="padding: 0; margin-top: 20px;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <!--Form Box-->
+                        <div class="container" id="formBox">
+                            <h2>Reset Password</h2>
+                            <?php if (count($errors) > 0): ?>
+                                     <div class="alert alert-danger">
+                                        <?php foreach($errors as $error): ?>
+                                        <li><?php echo $error; ?></li>
+                                        <?php endforeach; ?>
+                                     </div>
+                            <?php endif; ?>
+                            <p style="font-size: 14px;">Ketikkan password baru anda</p>
+                            <hr style="border-top: 1px solid white; margin-bottom: 36px;">
+                            <div class="w-100"></div>
+                            <form>
+                                <label class="label control-label">Password</label>
+                                <input type="text" class="form-control" name="password" placeholder="password">
+                                <label class="label control-label">Konfirmasi Password</label>
+                                <input type="password" class="form-control" name="passwordConf" placeholder="re-type password">
+                                <div class="col text-center" style="margin-top: 240px;">
+                                    <button name="reset-password-btn" type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="startbtn" style="margin-top: 10px;">
+                                        Reset
+                                    </button>
+                                </div>
+                            </form>
+                            
+                        </div>
+                    </div>
+                    <!--Image Box-->
+                    <div class="col-md-6">
+                        <div class="container" id="pictBox">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </form>
+    </body>
+</html>
