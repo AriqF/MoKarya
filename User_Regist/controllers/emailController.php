@@ -31,11 +31,11 @@ function SendVerificationEmail($userEmail, $token)
     
         <div class="wrapper">
             <p>
-                Thank you for signing up on our website. Please click on the link below
-                to verify your Email.
+                Selamat! tinggal satu klik lagi akun anda akan terverifikasi, silahkan klik tautan dibawah untuk verifikasi
+                dan masuk ke dalam website
             </p>
             <a href="http://localhost/Mokarya/User_Regist/index1.php?token=' . $token . '">
-                Verify Your Email Address
+                Verifikasi Email anda
             </a>
         </div>
     
@@ -43,7 +43,7 @@ function SendVerificationEmail($userEmail, $token)
     </html>';
 
     // Create a message
-    $message = (new Swift_Message('Verify Your Email Address'))
+    $message = (new Swift_Message('Verifikasi Email anda'))
     ->setFrom("mokaryad4@gmail.com")
     ->setTo($userEmail)
     ->setBody($body, 'text/html');
@@ -67,12 +67,13 @@ function SendPasswordResetLink($userEmail, $token)
     
         <div class="wrapper">
             <p>
-                Hello There,
+                Hallo,
 
-                Please click on the link below to reset your password.
+                Silahkan klik tautan dibawah untuk masuk kedalam halaman khusus untuk mereset 
+                password anda
             </p>
             <a href="http://localhost/Mokarya/User_Regist/index1.php?password-token=' . $token . '">
-                Reset your password
+                Reset password
             </a>
         </div>
     
@@ -80,7 +81,7 @@ function SendPasswordResetLink($userEmail, $token)
     </html>';
 
     // Create a message
-    $message = (new Swift_Message('Reset your password'))
+    $message = (new Swift_Message('Permintaan reset password'))
     ->setFrom("mokaryad4@gmail.com.com")
     ->setTo($userEmail)
     ->setBody($body, 'text/html');
