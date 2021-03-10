@@ -1,3 +1,4 @@
+<?php require_once 'controllers/authController.php'; ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -33,6 +34,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     </head>
     <body>
+        <form form class="form" action="login.php" method="post">
         <div class="content">
             <div class="container" id="box" style="padding: 0; margin-top: 20px;">
                 <div class="row">
@@ -40,18 +42,25 @@
                         <!--Form Box-->
                         <div class="container" id="formBox">
                             <h2>Login Forms</h2>
+                            <?php if (count($errors) > 0): ?>
+                                     <div class="alert alert-danger">
+                                        <?php foreach($errors as $error): ?>
+                                        <li><?php echo $error; ?></li>
+                                        <?php endforeach; ?>
+                                     </div>
+                            <?php endif; ?>
                             <p style="font-size: 14px;">Login agar dapat mulai menungggah karya-mu!</p>
                             <hr style="border-top: 1px solid white; margin-bottom: 36px;">
                             <div class="w-100"></div>
                             <form>
-                                <label class="label control-label">email</label>
-                                <input type="email" class="form-control" name="email" placeholder="email">
+                                <label class="label control-label">email atau nim</label>
+                                <input type="text" class="form-control" name="nim" placeholder="email atau nim" value="<?php echo $nim; ?>">
                                 <label class="label control-label">Password</label>
                                 <input type="password" class="form-control" name="password" placeholder="password">
                                 <div class="col text-center" style="margin-top: 240px;">
                                     <a href="register.php">saya belum memiliki akun</a> <a href="forgotPassword.php"> / lupa password?</a>
                                     <div class="w-100"></div>
-                                    <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="startbtn" style="margin-top: 10px;">
+                                    <button name="login-btn" type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="startbtn" style="margin-top: 10px;">
                                         Login
                                     </button>
                                 </div>
@@ -68,6 +77,6 @@
                 </div>
             </div>
         </div>
-
+        </form>
     </body>
 </html>

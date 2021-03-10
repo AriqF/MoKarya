@@ -52,7 +52,7 @@ if (!isset($_SESSION['id'])) {
             </div>
         <?php endif; ?>
 
-            <h3 style="color: black;">Welcome, <?php echo $_SESSION['username']; ?> </h3>
+            <h3 style="color: black;">Welcome, <?php echo $_SESSION['namalengkap']; ?> </h3>
 
             <!-- <a href="index1.php?logout=1" class="logout">logout</a> -->
             
@@ -66,7 +66,7 @@ if (!isset($_SESSION['id'])) {
             <?php endif; ?>
 
             <?php if($_SESSION['verified']): ?>
-                <a href="hiragana.php" style="text-decoration: none;"><button class="btn btn-block btn-lg btn-primary">I'm Verified</button></a>
+                <a href="dashboard_user.php" style="text-decoration: none;"><button class="btn btn-block btn-lg btn-primary">I'm Verified</button></a>
             <?php endif; ?>
 
             </div>

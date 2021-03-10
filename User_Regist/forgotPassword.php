@@ -1,3 +1,4 @@
+<?php require_once 'controllers/authController.php'; ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -33,6 +34,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     </head>
     <body>
+        <form class="form" action="forgotPassword.php" method="post">
         <div class="content">
             <div class="container" id="box" style="padding: 0; margin-top: 20px;">
                 <div class="row">
@@ -40,6 +42,13 @@
                         <!--Form Box-->
                         <div class="container" id="formBox">
                             <h2>Reset Password</h2>
+                                   <?php if (count($errors) > 0): ?>
+                                             <div class="alert alert-danger">
+                                                <?php foreach($errors as $error): ?>
+                                                <li><?php echo $error; ?></li>
+                                                <?php endforeach; ?>
+                                             </div>
+                                    <?php endif; ?>
                             <p style="font-size: 14px;">Kirimkan permintaan reset password ke email anda</p>
                             <hr style="border-top: 1px solid white; margin-bottom: 36px;">
                             <div class="w-100"></div>
@@ -47,7 +56,7 @@
                                 <label class="label control-label">email</label>
                                 <input type="email" class="form-control" name="email" placeholder="email">
                                 <div class="col text-center" style="margin-top: 320px;">
-                                    <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="startbtn" style="margin-top: 10px;">
+                                    <button name="forgot-password" type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="startbtn" style="margin-top: 10px;">
                                         Kirim
                                     </button>
                                 </div>
@@ -64,6 +73,6 @@
                 </div>
             </div>
         </div>
-
+        </form>
     </body>
 </html>

@@ -1,3 +1,4 @@
+<?php require_once 'controllers/authController.php'; ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -33,6 +34,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     </head>
     <body>
+        <form form class="form" action="register.php" method="post">
         <div class="content">
             <div class="container" id="box" style="padding: 0; margin-top: 20px;">
                 <div class="row">
@@ -40,16 +42,23 @@
                         <!--Form Box-->
                         <div class="container" id="formBox">
                             <h2>Sign Up Forms</h2>
+                                   <?php if (count($errors) > 0): ?>
+                                             <div class="alert alert-danger">
+                                                <?php foreach($errors as $error): ?>
+                                                <li><?php echo $error; ?></li>
+                                                <?php endforeach; ?>
+                                             </div>
+                                    <?php endif; ?>
                             <p style="font-size: 14px;">Sign up lalu login agar dapat memulai menungggah karya-mu!</p>
                             <hr style="border-top: 1px solid white; margin-bottom: 15px;">
                             <form>
                                 
                                 <label class="label control-label">Nama Lengkap</label>
-                                <input type="text" class="form-control" name="fullname" placeholder="nama lengkap">
+                                <input type="text" class="form-control" name="namalengkap" placeholder="nama lengkap" value="<?php echo $namalengkap; ?>">
                                 <div class="row">
                                     <div class="col-12 col-md-8">
                                         <label class="label control-label">Email</label>
-                                        <input type="email" class="form-control" name="email" placeholder="email universitas">
+                                        <input type="email" class="form-control" name="email" placeholder="email universitas" value="<?php echo $email; ?>">
                                     </div>
                                     <div class="col-6 col-md-4">
                                         <label class="label control-label">NIM</label>
@@ -73,7 +82,7 @@
                                 <div class="col text-center" style="margin-top: 15px;">
                                     <a href="login.php">saya sudah memiliki akun &#10003;</a>
                                     <div class="w-100"></div>
-                                    <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="startbtn" style="margin-top: 10px;">
+                                    <button name="signup-btn" type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="startbtn" style="margin-top: 10px;">
                                         Sign Up
                                     </button>
                                 </div>
@@ -90,6 +99,6 @@
                 </div>
             </div>
         </div>
-
+        </form>
     </body>
 </html>
