@@ -95,9 +95,6 @@ if (isset($_POST['signup-btn'])) {
     $userCount = $result->num_rows;
     $stmt->close();
 
-    if ($userCount > 0) {
-        $errors['angkatan'] = "<font color='red'; > angakatan sudah di pakai </font>";
-    }
 
     $kelasQuery = "SELECT * FROM users WHERE kelas=? LIMIT 1";
     $stmt = $conn->prepare($kelasQuery);
@@ -106,10 +103,6 @@ if (isset($_POST['signup-btn'])) {
     $result = $stmt->get_result();
     $userCount = $result->num_rows;
     $stmt->close();
-
-    if ($userCount > 0) {
-        $errors['kelas'] = "<font color='red'; > kelas sudah di pakai </font>";
-    }
 
     if (count($errors) === 0){
         $password = password_hash($password, PASSWORD_DEFAULT);
