@@ -54,7 +54,7 @@
                             <div class="w-100"></div>
                             <form>
                                 <label class="label control-label">Password</label>
-                                <input type="text" class="form-control" name="password" placeholder="password">
+                                <input type="password" class="form-control" name="password" placeholder="password">
                                 <label class="label control-label">Konfirmasi Password</label>
                                 <input type="password" class="form-control" name="passwordConf" placeholder="re-type password">
                                 <div class="col text-center" style="margin-top: 240px;">

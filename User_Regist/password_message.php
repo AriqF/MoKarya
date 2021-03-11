@@ -1,25 +1,4 @@
-<?php 
-
-require_once 'controllers/authController.php'; 
-
-// verify user token
-if (isset($_GET['token'])) {
-    $token = $_GET['token'];
-    verifyUser($token);
-}
-
-// verify user token from forgot password
-if (isset($_GET['password-token'])) {
-    $passwordToken = $_GET['password-token'];
-    resetPassword($passwordToken);
-}
-
-if (!isset($_SESSION['id'])) {
-    header('location: login.php');
-    exit();
-}
-
-?>
+<?php require_once 'controllers/authController.php'; ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -55,40 +34,18 @@ if (!isset($_SESSION['id'])) {
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     </head>
     <body>
-        <!-- <form form class="form" action="reset_password.php" method="post"> -->
         <div class="content">
             <div class="container" id="box" style="padding: 0; margin-top: 20px;">
                 <div class="row">
                     <div class="col-md-6">
                         <!--Form Box-->
-                        <?php if(isset($_SESSION['message'])): ?>
-                            <div class="alert <?php echo $_SESSION['alert-class']; ?>">
-                                <?php 
-                                
-                                echo $_SESSION['message']; 
-                                unset($_SESSION['message']);
-                                unset($_SESSION['alert-class']);
-                                
-                                ?> 
-                            </div>
-                         <?php endif; ?>
                         <div class="container" id="formBox">
-                            <h2>Selamat Datang, <?php echo $_SESSION['namalengkap']; ?> </h2>
-
-                            <p style="font-size: 14px;">Email telah dikirimkan untuk verifikasi akun anda</p>
+                        	<h2>Cek Email anda</h2>
                             <hr style="border-top: 1px solid white; margin-bottom: 36px;">
                             <div class="w-100"></div>
-                            <?php if(!$_SESSION['verified']): ?>
                                 <div class="alert alert-warning">
-                                    Anda belum memverifikasi email, silahkan cek email anda untuk verifikasi.
-                                    Kami telah mengirimkan tautan verifikasi ke email 
-                                    <strong><?php echo $_SESSION['email']; ?> </strong>
+                                    Email telah dikirimkan untuk mereset password anda.
                                 </div>
-                    
-                            <?php elseif($_SESSION['verified']): ?>
-                                <a href="dashboard_user.php" style="text-decoration: none;"><button class="btn btn-block btn-lg btn-primary">Masuk &#187</button></a>
-                            <?php endif; ?>
-                            
                         </div>
                     </div>
                     <!--Image Box-->
@@ -100,6 +57,5 @@ if (!isset($_SESSION['id'])) {
                 </div>
             </div>
         </div>
-      <!--   </form> -->
     </body>
 </html>
