@@ -165,7 +165,7 @@ if (isset($_POST['login-btn'])) {
             // flash message
             $_SESSION['message'] = "You are now logged in";
             $_SESSION['alert-class'] = "alert-success";
-            header('location: dashboard.php');
+            header('location: dashboard_user.php');
             exit();
     
         } else {
