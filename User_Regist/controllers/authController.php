@@ -58,10 +58,6 @@ if (isset($_POST['signup-btn'])) {
     $userCount = $result->num_rows;
     $stmt->close();
 
-    if ($userCount > 0) {
-        $errors['namalengkap'] = "<font color='red'; > namalengkap sudah di pakai </font>";
-    }
-
     $emailQuery = "SELECT * FROM users WHERE email=? LIMIT 1";
     $stmt = $conn->prepare($emailQuery);
     $stmt->bind_param('s',$email);
@@ -74,7 +70,6 @@ if (isset($_POST['signup-btn'])) {
         $errors['email'] = "<font color='red'; > Email sudah di pakai </font>";
     }
     
-
     $nimQuery = "SELECT * FROM users WHERE nim=? LIMIT 1";
     $stmt = $conn->prepare($nimQuery);
     $stmt->bind_param('s',$nim);

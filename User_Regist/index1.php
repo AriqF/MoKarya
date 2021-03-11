@@ -55,7 +55,7 @@ if (!isset($_SESSION['id'])) {
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     </head>
     <body>
-        <form form class="form" action="reset_password.php" method="post">
+        <!-- <form form class="form" action="reset_password.php" method="post"> -->
         <div class="content">
             <div class="container" id="box" style="padding: 0; margin-top: 20px;">
                 <div class="row">
@@ -100,6 +100,6 @@ if (!isset($_SESSION['id'])) {
                 </div>
             </div>
         </div>
-        </form>
+      <!--   </form> -->
     </body>
 </html>
