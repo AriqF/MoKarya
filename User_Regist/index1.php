@@ -74,8 +74,6 @@ if (!isset($_SESSION['id'])) {
                          <?php endif; ?>
                         <div class="container" id="formBox">
                             <h2>Selamat Datang, <?php echo $_SESSION['namalengkap']; ?> </h2>
-
-                            <p style="font-size: 14px;">Email telah dikirimkan untuk verifikasi akun anda</p>
                             <hr style="border-top: 1px solid white; margin-bottom: 36px;">
                             <div class="w-100"></div>
                             <?php if(!$_SESSION['verified']): ?>
@@ -86,6 +84,7 @@ if (!isset($_SESSION['id'])) {
                                 </div>
                     
                             <?php elseif($_SESSION['verified']): ?>
+
                                 <a href="dashboard_user.php" style="text-decoration: none;"><button class="btn btn-block btn-lg btn-primary">Masuk &#187</button></a>
                             <?php endif; ?>
                             
