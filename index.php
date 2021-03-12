@@ -31,7 +31,15 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Epilogue&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-        
+        <style>
+          .redirect-btn{
+            text-decoration: none;
+          }
+          .redirect-btn:hover{
+            color: white;
+            text-decoration: none;
+          }
+        </style>
     </head> <!--#4527a4;-->
     <body>
       
@@ -83,11 +91,11 @@
                           <h1 class="font-weight-semibold ml3 fadeInDown">MoKarya</h1>
                           <p class="lead fadeInRight">Website Projek Monitor Karya Mahasiswa <br> D4 Manajemen Informatika </p>
                           <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" id="startbtn">
-                            Upload Karya <!--Login Mhs-->
+                            <a href="User_Regist/login.php" class="redirect-btn">Unggah Karya <!--Login Mhs--></a>
                           </button>
                           <div class="w-100"></div>
                           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="startbtn2">
-                            Lihat Gallery &#187 <!--To Gallery Page-->
+                            <a href="User_Regist/gallery_guest.php" class="redirect-btn">Lihat Gallery &#187 <!--To Gallery Page Guest--></a>
                           </button>
                         </td>
                       </tr>
