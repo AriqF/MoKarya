@@ -132,7 +132,7 @@
       </div>
     
       
-      <div class="jumbotron footer" style="width: 100%; margin: 0">
+      <div class="jumbotron footer fixed-footer" style="width: 100%; margin: 0">
         <div class="container-fluid text-center text-md-left">
             <div class="row">
                 <div class="col-md-6 mt-md-0 mt-3">
@@ -159,7 +159,7 @@
                 </div>
             </div>
         </div>
-    </div>
+      </div>
 
       <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
       <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
