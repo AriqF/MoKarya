@@ -47,6 +47,9 @@
                     <a class="nav-link active" href="User_Regist/gallery_user.php"><i class="fas fa-images"></i> Gallery</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-upload"></i> Unggah</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="User_Regist/profile_user.php"><i class="fas fa-id-card"></i> Profile</a>
                 </li>               
                 <li class="nav-item">
@@ -57,30 +60,110 @@
         </nav>
 
         <div class="jumbotron gallery">
-            <h2 class="text-center font-weight-semibold">Testing Gallery Page</h3>
-            
-            <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">Title 1</div> <!--nth-child(start from 4)--> <!--sliderPerView+1-->
-                <div class="swiper-slide">Title 2</div>
-                <div class="swiper-slide">Title 3</div> 
-                <div class="swiper-slide">Title 4</div>
-                <div class="swiper-slide">Title 5</div>
-                <div class="swiper-slide">Title 6</div>
-                <div class="swiper-slide">Title 7</div>
-                <div class="swiper-slide">Title 8</div>
-                <div class="swiper-slide">Title 9</div>
-            </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
-            <!-- Add Arrows -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            </div>       
-        </div>
+          <div class="container-fluid">
+            <div class="px-lg-5">
 
+              <div class="row py-5">
+                <div class="col-lg-12 mx-auto">
+                  <div class="box p-5 shadow-sm rounded ">
+                    <h1 class="display-4">
+                      Gallery Showcase 
+                    </h1>
+                    <p class="lead" style="font-size: 18px;">
+                      Karya Yand Ditampilkan Disini Merupakan Hasil Karya Mahasiswa Program Studi D4
+                    </p>
+                  </div>
+                </div>
+              </div>
 
-        <div class="jumbotron footer" style="width: 100%; margin: 0">
+              <div class="row">
+
+                <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+                  <div class="bg-white rounded shadow-sm">
+                    <img src="../src/img/1.jpg" class="img-fluid card-img-top">
+                    <div class="p-4">
+                      <h5><a href="#" class="text-dark">Image 01</a></h5>
+                      <p class="small text-muted mb-0">Lorem Ipsum Dolor Sit Amet</p>
+                      <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+                        <button class="btn btn-primary">Read More</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+                  <div class="bg-white rounded shadow-sm">
+                    <img src="../src/img/2.jpg" class="img-fluid card-img-top">
+                    <div class="p-4">
+                      <h5><a href="#" class="text-dark">Image 02</a></h5>
+                      <p class="small text-muted mb-0">Lorem Ipsum Dolor Sit Amet</p>
+                      <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+                        <button class="btn btn-primary">Read More</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+                  <div class="bg-white rounded shadow-sm">
+                    <img src="../src/img/3.jpg" class="img-fluid card-img-top">
+                    <div class="p-4">
+                      <h5><a href="#" class="text-dark">Image 03</a></h5>
+                      <p class="small text-muted mb-0">Lorem Ipsum Dolor Sit Amet</p>
+                      <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+                        <button class="btn btn-primary">Read More</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+                  <div class="bg-white rounded shadow-sm">
+                    <img src="../src/img/1.jpg" class="img-fluid card-img-top">
+                    <div class="p-4">
+                      <h5><a href="#" class="text-dark">Image 01</a></h5>
+                      <p class="small text-muted mb-0">Lorem Ipsum Dolor Sit Amet</p>
+                      <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+                        <button class="btn btn-primary">Read More</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+                  <div class="bg-white rounded shadow-sm">
+                    <img src="../src/img/2.jpg" class="img-fluid card-img-top">
+                    <div class="p-4">
+                      <h5><a href="#" class="text-dark">Image 02</a></h5>
+                      <p class="small text-muted mb-0">Lorem Ipsum Dolor Sit Amet</p>
+                      <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+                        <button class="btn btn-primary">Read More</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+                  <div class="bg-white rounded shadow-sm">
+                    <img src="../src/img/3.jpg" class="img-fluid card-img-top">
+                    <div class="p-4">
+                      <h5><a href="#" class="text-dark">Image 03</a></h5>
+                      <p class="small text-muted mb-0">Lorem Ipsum Dolor Sit Amet</p>
+                      <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+                        <button class="btn btn-primary">Read More</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div> <!--row div-->
+
+            </div> <!--px-lg-5 div-->
+          </div> <!--container-fluid-->
+
+        </div> <!--gallery div-->
+
+        <div class="jumbotron footer fixed-footer" style="width: 100%; margin: 0">
             <div class="container-fluid text-center text-md-left">
                 <div class="row">
                     <div class="col-md-6 mt-md-0 mt-3">
