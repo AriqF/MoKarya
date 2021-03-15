@@ -62,13 +62,13 @@
           <div class="container-fluid">
             <div class="px-lg-5">
 
-              <div class="row py-5">
+              <div class="row py-5 fadeInRight">
                 <div class="col-lg-12 mx-auto">
                   <div class="box p-5 shadow-sm rounded ">
-                    <h1 class="display-4">
+                    <h1 class="display-4 fadeInDown">
                       Gallery Showcase 
                     </h1>
-                    <p class="lead" style="font-size: 18px;">
+                    <p class="lead fadeInUp" style="font-size: 18px;">
                       Karya Yand Ditampilkan Disini Merupakan Hasil Karya Mahasiswa Program Studi D4
                     </p>
                   </div>
@@ -77,7 +77,7 @@
 
               <div class="row">
 
-              <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+              <div class="col-xl-3 col-lg-4 col-md-6 mb-4 anim">
                   <div class="bg-white rounded shadow-sm">
                     <img src="../src/img/1.jpg" class="img-fluid card-img-top">
                     <div class="p-4">
@@ -98,7 +98,7 @@
                   </div>
                 </div>
 
-                <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+                <div class="col-xl-3 col-lg-4 col-md-6 mb-4 anim">
                   <div class="bg-white rounded shadow-sm">
                     <img src="../src/img/2.jpg" class="img-fluid card-img-top">
                     <div class="p-4">
@@ -119,7 +119,7 @@
                   </div>
                 </div>
 
-                <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+                <div class="col-xl-3 col-lg-4 col-md-6 mb-4 anim">
                   <div class="bg-white rounded shadow-sm">
                     <img src="../src/img/3.jpg" class="img-fluid card-img-top">
                     <div class="p-4">
@@ -140,7 +140,7 @@
                   </div>
                 </div>
 
-                <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+                <div class="col-xl-3 col-lg-4 col-md-6 mb-4 anim">
                   <div class="bg-white rounded shadow-sm">
                     <img src="../src/img/1.jpg" class="img-fluid card-img-top">
                     <div class="p-4">
@@ -161,7 +161,7 @@
                   </div>
                 </div>
 
-                <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+                <div class="col-xl-3 col-lg-4 col-md-6 mb-4 anim">
                   <div class="bg-white rounded shadow-sm">
                     <img src="../src/img/2.jpg" class="img-fluid card-img-top">
                     <div class="p-4">
@@ -182,7 +182,7 @@
                   </div>
                 </div>
 
-                <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+                <div class="col-xl-3 col-lg-4 col-md-6 mb-4 anim">
                   <div class="bg-white rounded shadow-sm">
                     <img src="../src/img/3.jpg" class="img-fluid card-img-top">
                     <div class="p-4">
@@ -203,7 +203,7 @@
                   </div>
                 </div>
 
-                <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+                <div class="col-xl-3 col-lg-4 col-md-6 mb-4 anim">
                   <div class="bg-white rounded shadow-sm">
                     <img src="../src/img/1.jpg" class="img-fluid card-img-top">
                     <div class="p-4">
@@ -224,7 +224,7 @@
                   </div>
                 </div>
 
-                <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+                <div class="col-xl-3 col-lg-4 col-md-6 mb-4 anim">
                   <div class="bg-white rounded shadow-sm">
                     <img src="../src/img/2.jpg" class="img-fluid card-img-top">
                     <div class="p-4">
