@@ -50,10 +50,13 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#" onclick="bottomPage()"><i class="fas fa-id-card"></i> Tentang Kami</a>
-                </li>               
+                </li> 
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="bottomPage()"><i class="fas fa-home"></i> Tentang Kami</a>
+                </li>                 
             </ul>
             </div>
-        </nav>
+        </nav> 
 
         <div class="jumbotron gallery">
           <div class="container-fluid">
@@ -74,12 +77,20 @@
 
               <div class="row">
 
-                <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+              <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
                   <div class="bg-white rounded shadow-sm">
                     <img src="../src/img/1.jpg" class="img-fluid card-img-top">
                     <div class="p-4">
-                      <h5><a href="#" class="text-dark">Image 01</a></h5>
-                      <p class="small text-muted mb-0">Lorem Ipsum Dolor Sit Amet</p>
+                      <h5><a class="text-dark">Title 01</a></h5>
+                      <p class="small text-muted mb-0"> <!--Desc goes here -->
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sagittis consequat ipsum, 
+                        non pulvinar nulla sagittis id. 
+                      </p>
+                      <hr class="separator">
+                      <p class="small text-muted mb-0">
+                        <i class="fas fa-user-friends"></i> Anthony G, Tyo R , Poppy L
+                      </p>
+                      <hr class="separator">
                       <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
                         <button class="btn btn-primary">Read More</button>
                       </div>
@@ -91,8 +102,16 @@
                   <div class="bg-white rounded shadow-sm">
                     <img src="../src/img/2.jpg" class="img-fluid card-img-top">
                     <div class="p-4">
-                      <h5><a href="#" class="text-dark">Image 02</a></h5>
-                      <p class="small text-muted mb-0">Lorem Ipsum Dolor Sit Amet</p>
+                      <h5><a class="text-dark">Title 02</a></h5>
+                      <p class="small text-muted mb-0"> <!--Desc goes here -->
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sagittis consequat ipsum, 
+                        non pulvinar nulla sagittis id. 
+                      </p>
+                      <hr class="separator">
+                      <p class="small text-muted mb-0">
+                        <i class="fas fa-user-friends"></i> Anthony G, Tyo R , Poppy L
+                      </p>
+                      <hr class="separator">
                       <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
                         <button class="btn btn-primary">Read More</button>
                       </div>
@@ -104,8 +123,16 @@
                   <div class="bg-white rounded shadow-sm">
                     <img src="../src/img/3.jpg" class="img-fluid card-img-top">
                     <div class="p-4">
-                      <h5><a href="#" class="text-dark">Image 03</a></h5>
-                      <p class="small text-muted mb-0">Lorem Ipsum Dolor Sit Amet</p>
+                      <h5><a class="text-dark">Title 03</a></h5>
+                      <p class="small text-muted mb-0"> <!--Desc goes here -->
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sagittis consequat ipsum, 
+                        non pulvinar nulla sagittis id. 
+                      </p>
+                      <hr class="separator">
+                      <p class="small text-muted mb-0">
+                        <i class="fas fa-user-friends"></i> Anthony G, Tyo R , Poppy L
+                      </p>
+                      <hr class="separator">
                       <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
                         <button class="btn btn-primary">Read More</button>
                       </div>
@@ -117,8 +144,16 @@
                   <div class="bg-white rounded shadow-sm">
                     <img src="../src/img/1.jpg" class="img-fluid card-img-top">
                     <div class="p-4">
-                      <h5><a href="#" class="text-dark">Image 01</a></h5>
-                      <p class="small text-muted mb-0">Lorem Ipsum Dolor Sit Amet</p>
+                      <h5><a class="text-dark">Title 01</a></h5>
+                      <p class="small text-muted mb-0"> <!--Desc goes here -->
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sagittis consequat ipsum, 
+                        non pulvinar nulla sagittis id. 
+                      </p>
+                      <hr class="separator">
+                      <p class="small text-muted mb-0">
+                        <i class="fas fa-user-friends"></i> Anthony G, Tyo R , Poppy L
+                      </p>
+                      <hr class="separator">
                       <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
                         <button class="btn btn-primary">Read More</button>
                       </div>
@@ -130,8 +165,16 @@
                   <div class="bg-white rounded shadow-sm">
                     <img src="../src/img/2.jpg" class="img-fluid card-img-top">
                     <div class="p-4">
-                      <h5><a href="#" class="text-dark">Image 02</a></h5>
-                      <p class="small text-muted mb-0">Lorem Ipsum Dolor Sit Amet</p>
+                      <h5><a class="text-dark">Title 02</a></h5>
+                      <p class="small text-muted mb-0"> <!--Desc goes here -->
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sagittis consequat ipsum, 
+                        non pulvinar nulla sagittis id. 
+                      </p>
+                      <hr class="separator">
+                      <p class="small text-muted mb-0">
+                        <i class="fas fa-user-friends"></i> Anthony G, Tyo R , Poppy L
+                      </p>
+                      <hr class="separator">
                       <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
                         <button class="btn btn-primary">Read More</button>
                       </div>
@@ -143,8 +186,58 @@
                   <div class="bg-white rounded shadow-sm">
                     <img src="../src/img/3.jpg" class="img-fluid card-img-top">
                     <div class="p-4">
-                      <h5><a href="#" class="text-dark">Image 03</a></h5>
-                      <p class="small text-muted mb-0">Lorem Ipsum Dolor Sit Amet</p>
+                      <h5><a class="text-dark">Title 03</a></h5>
+                      <p class="small text-muted mb-0"> <!--Desc goes here -->
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sagittis consequat ipsum, 
+                        non pulvinar nulla sagittis id. 
+                      </p>
+                      <hr class="separator">
+                      <p class="small text-muted mb-0">
+                        <i class="fas fa-user-friends"></i> Anthony G, Tyo R , Poppy L
+                      </p>
+                      <hr class="separator">
+                      <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+                        <button class="btn btn-primary">Read More</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+                  <div class="bg-white rounded shadow-sm">
+                    <img src="../src/img/1.jpg" class="img-fluid card-img-top">
+                    <div class="p-4">
+                      <h5><a class="text-dark">Title 01</a></h5>
+                      <p class="small text-muted mb-0"> <!--Desc goes here -->
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sagittis consequat ipsum, 
+                        non pulvinar nulla sagittis id. 
+                      </p>
+                      <hr class="separator">
+                      <p class="small text-muted mb-0">
+                        <i class="fas fa-user-friends"></i> Anthony G, Tyo R , Poppy L
+                      </p>
+                      <hr class="separator">
+                      <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+                        <button class="btn btn-primary">Read More</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+                  <div class="bg-white rounded shadow-sm">
+                    <img src="../src/img/2.jpg" class="img-fluid card-img-top">
+                    <div class="p-4">
+                      <h5><a class="text-dark">Title 02</a></h5>
+                      <p class="small text-muted mb-0"> <!--Desc goes here -->
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sagittis consequat ipsum, 
+                        non pulvinar nulla sagittis id. 
+                      </p>
+                      <hr class="separator">
+                      <p class="small text-muted mb-0">
+                        <i class="fas fa-user-friends"></i> Anthony G, Tyo R , Poppy L
+                      </p>
+                      <hr class="separator">
                       <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
                         <button class="btn btn-primary">Read More</button>
                       </div>
