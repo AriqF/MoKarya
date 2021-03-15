@@ -60,7 +60,7 @@
                 </ul>
             </div>
         </nav>
-        <div class="container" id="box" style=" margin-top: 50px; color:white">
+        <div class="container" id="box" style=" margin-top: 50px; color:white; padding-top: 30px;">
             <div class="row">
                 <div class="col-md-6">
                     <!--Form Box-->
