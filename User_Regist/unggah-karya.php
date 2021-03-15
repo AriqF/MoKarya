@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>MoKarya | Gallery</title>
+        <title>MoKarya | Unggah Karya</title>
          <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -46,13 +46,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="User_Regist/gallery_user.php"><i class="fas fa-images"></i> Gallery</a>
+                        <a class="nav-link" href="dashboard_user.php"><i class="fas fa-images"></i> Gallery</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#"><i class="fas fa-upload"></i> Unggah</a>
+                        <a class="nav-link active" href="unggah-karya.php"><i class="fas fa-upload"></i> Unggah</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="User_Regist/profile_user.php"><i class="fas fa-id-card"></i> Profile</a>
+                        <a class="nav-link" href="profile-user.php"><i class="fas fa-id-card"></i> Profile</a>
                     </li>               
                     <li class="nav-item">
                         <a class="nav-link" href="#"><i class="fas fa-sign-out-alt"></i> Sign Out</a>
