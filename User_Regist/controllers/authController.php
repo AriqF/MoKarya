@@ -265,7 +265,6 @@ if (isset($_POST['reset-password-btn'])) {
 }
 
 
-
 function resetPassword($token) 
 {
     global $conn;
