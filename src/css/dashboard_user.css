@@ -84,7 +84,10 @@ input{
     width: 100%;
 }
 .fadeInRight{
-    animation: fadeInRight 2s ease;
+    animation: fadeInRight 3s ease;
+}
+.fadeInLeft{
+    animation: fadeInLeft 3s ease;
 }
 .fadeInUp{
     animation: fadeInUp 2s ease;
@@ -98,6 +101,19 @@ input{
 }
 .anim:hover{
     transform: scale(1.02);
+}
+.op{
+    animation: open 3s ease;
+}
+@keyframes open{
+    0%{
+        opacity: 0;
+        width: 40%;
+    }
+    100%{
+        opacity: 1;
+        width: 100%;
+    }
 }
 @keyframes opac{
     0%{
@@ -137,6 +153,17 @@ input{
     100% {
         transform: translateY(0px);
         opacity: 1;
+    }
+}
+@keyframes fadeInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(40px);
+       
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
     }
 }
 
