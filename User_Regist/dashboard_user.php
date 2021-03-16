@@ -53,7 +53,7 @@
                     <a class="nav-link" href="profile-user.php"><i class="fas fa-id-card"></i> Profile</a>
                 </li>               
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-sign-out-alt"></i> Sign Out</a>
+                    <a class="nav-link" href="../index.php?logout=1"><i class="fas fa-sign-out-alt"></i> Sign Out</a>
                 </li>
             </ul>
             </div>
