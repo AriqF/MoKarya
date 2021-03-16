@@ -1,3 +1,8 @@
+<?php 
+
+require_once 'controllers/authController.php'; 
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -39,7 +44,7 @@
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4527a4;">
-            <a class="navbar-brand" href="#">Welcome, </a> <!--add user session name- -->
+            <a class="navbar-brand" href="#">Welcome, <?php echo $_SESSION['namalengkap']; ?> </a> <!--add user session name- -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -55,7 +60,7 @@
                         <a class="nav-link" href="profile-user.php"><i class="fas fa-id-card"></i> Profile</a>
                     </li>               
                     <li class="nav-item">
-                        <a class="nav-link" href="../index.php?logout=1"><i class="fas fa-sign-out-alt"></i> Sign Out</a>
+                        <a class="nav-link" href="index1.php?logout=1"><i class="fas fa-sign-out-alt"></i> Sign Out</a>
                     </li>
                 </ul>
             </div>

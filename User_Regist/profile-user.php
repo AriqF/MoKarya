@@ -44,7 +44,7 @@ require_once 'controllers/authController.php';
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4527a4;">
-            <a class="navbar-brand" href="#">Welcome, </a> <!--add user session name- -->
+            <a class="navbar-brand" href="#">Welcome, <?php echo $_SESSION['namalengkap']; ?> </a> <!--add user session name- -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -60,7 +60,7 @@ require_once 'controllers/authController.php';
                         <a class="nav-link active" href="profile-user.php"><i class="fas fa-id-card"></i> Profile</a>
                     </li>               
                     <li class="nav-item">
-                        <a class="nav-link" href="../index.php?logout=1"><i class="fas fa-sign-out-alt"></i> Sign Out</a>
+                        <a class="nav-link" href="index1.php?logout=1"><i class="fas fa-sign-out-alt"></i> Sign Out</a>
                     </li>
                 </ul>
             </div>
@@ -90,11 +90,11 @@ require_once 'controllers/authController.php';
                             <div class="row">
                                     <div class="col-6 ">
                                         <label class="label control-label">Angkatan</label>
-                                        <input type="number" class="form-control" name="angkatan" placeholder="//query old data">
+                                        <input type="text" class="form-control" name="angkatan" value="<?php echo $_SESSION['angkatan']; ?> " readonly>
                                     </div>
                                     <div class="col-6 ">
                                         <label class="label control-label">Kelas</label>
-                                        <input type="text" class="form-control" name="kelas" placeholder="//query old data" style="text-transform: uppercase;" maxlength="1">
+                                        <input style="text-transform: uppercase;" maxlength="1" type="text" class="form-control" name="kelas" value="<?php echo $_SESSION['kelas']; ?> " readonly >
                                     </div>
                                 </div>
                                                       

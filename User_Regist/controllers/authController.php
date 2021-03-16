@@ -159,8 +159,11 @@ if (isset($_POST['login-btn'])) {
       if (password_verify($password, $user['password'])) {
             //login sucess
             $_SESSION['id'] = $user['id'];
+            $_SESSION['namalengkap'] = $user['namalengkap'];
             $_SESSION['email'] = $user['email'];
-             $_SESSION['nim'] = $user['nim']; //namalengkap
+            $_SESSION['nim'] = $user['nim']; //namalengkap
+            $_SESSION['angkatan'] = $user['angkatan'];
+            $_SESSION['kelas'] = $user['kelas'];
             $_SESSION['verified'] = $user['verified'];
             // flash message
             $_SESSION['message'] = "You are now logged in";
@@ -182,10 +185,15 @@ if (isset($_GET['logout'])) {
     unset($_SESSION['id']);
     unset($_SESSION['namalengkap']);
     unset($_SESSION['email']);
+    unset($_SESSION['nim']);
+    unset($_SESSION['angkatan']);
+    unset($_SESSION['kelas']);
     unset($_SESSION['verified']);
-    header('location: login.php');
+    header('location:../index.php');
     exit();
 }
+
+
 
 // verify user token
 function verifyUser($token)
@@ -203,6 +211,9 @@ function verifyUser($token)
             $_SESSION['id'] = $user['id'];
             $_SESSION['namalengkap'] = $user['namalengkap'];
             $_SESSION['email'] = $user['email'];
+            $_SESSION['nim'] = $user['nim'];
+            $_SESSION['angkatan'] = $user['angkatan'];
+            $_SESSION['kelas'] = $user['kelas'];
             $_SESSION['verified'] = 1;
             // flash message
             $_SESSION['message'] = "Your Email was Succesfully verified";

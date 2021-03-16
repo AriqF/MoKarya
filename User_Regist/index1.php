@@ -15,7 +15,7 @@ if (isset($_GET['password-token'])) {
 }
 
 if (!isset($_SESSION['id'])) {
-    header('location: login.php');
+    header('location:login.php');
     exit();
 }
 
