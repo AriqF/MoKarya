@@ -99,9 +99,6 @@ require_once 'controllers/authController.php';
                                 </div>
                                                       
                             <div class="w-100"></div>
-                            <button name="submit-btn" type="submit" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; width: 30%; border-radius: 5px" >
-                                Perbarui
-                            </button>
                         </form>
                     </div>
                        
