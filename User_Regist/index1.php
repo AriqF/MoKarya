@@ -13,7 +13,7 @@ if (isset($_GET['password-token'])) {
     $passwordToken = $_GET['password-token'];
     resetPassword($passwordToken);
 }
-
+//user not login
 if (!isset($_SESSION['id'])) {
     header('location:login.php');
     exit();
