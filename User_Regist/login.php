@@ -49,7 +49,7 @@
                                         <?php endforeach; ?>
                                      </div>
                             <?php endif; ?>
-                            <p style="font-size: 14px;">Login agar dapat mulai menungggah karya-mu!</p>
+                            <p style="font-size: 14px;">Login agar dapat mulai mengunggah karya-mu!</p>
                             <hr style="border-top: 1px solid white; margin-bottom: 36px;">
                             <div class="w-100"></div>
                             <form>
