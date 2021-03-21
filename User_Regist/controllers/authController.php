@@ -25,7 +25,7 @@ if (isset($_POST['signup-btn'])) {
 
     // validation
     if (empty($namalengkap)) {
-    $errors['namalengkap'] = "<font color='red'; > nama lengkap Required </font>";
+    $errors['namalengkap'] = "<font color='red'; > Nama lengkap Required </font>";
     }
     if (!filter_var($_GET['email'], FILTER_VALIDATE_EMAIL)) {
         $errors['email'] = "<font color='red'; > Email Address Is Invalid </font>";
