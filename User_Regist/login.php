@@ -53,7 +53,7 @@
                             <hr style="border-top: 1px solid white; margin-bottom: 36px;">
                             <div class="w-100"></div>
                             <form>
-                                <label class="label control-label">email atau nim</label>
+                                <label class="label control-label">Email atau NIM</label>
                                 <input type="text" class="form-control" name="nim" placeholder="email atau nim" value="<?php echo $nim; ?>">
                                 <label class="label control-label">Password</label>
                                 <input type="password" class="form-control" name="password" placeholder="password">
