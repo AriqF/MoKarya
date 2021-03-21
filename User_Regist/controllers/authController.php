@@ -27,7 +27,7 @@ if (isset($_POST['signup-btn'])) {
     if (empty($namalengkap)) {
     $errors['namalengkap'] = "<font color='red'; > Nama lengkap Required </font>";
     }
-    if (!filter_var($_GET['email'], FILTER_VALIDATE_EMAIL)) {
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $errors['email'] = "<font color='red'; > Email Address Is Invalid </font>";
     }
     if (empty($email)) {
@@ -189,7 +189,7 @@ if (isset($_GET['logout'])) {
     unset($_SESSION['angkatan']);
     unset($_SESSION['kelas']);
     unset($_SESSION['verified']);
-    header('location:../index');
+    header('location:../');
     exit();
 }
 
