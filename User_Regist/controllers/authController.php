@@ -27,20 +27,20 @@ if (isset($_POST['signup-btn'])) {
     if (empty($namalengkap)) {
     $errors['namalengkap'] = "<font color='red'; > nama lengkap Required </font>";
     }
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    if (!filter_var($_GET['email'], FILTER_VALIDATE_EMAIL)) {
         $errors['email'] = "<font color='red'; > Email Address Is Invalid </font>";
     }
     if (empty($email)) {
         $errors['email'] = "<font color='red'; > Email Required </font>";
     }
     if (empty($nim)) {
-    $errors['nim'] = "<font color='red'; > nim Required </font>";
+    $errors['nim'] = "<font color='red'; > NIM Required </font>";
     }
     if (empty($angkatan)) {
-    $errors['angkatan'] = "<font color='red'; > angkatan Required </font>";
+    $errors['angkatan'] = "<font color='red'; > Angkatan Required </font>";
     }
     if (empty($kelas)) {
-    $errors['kelas'] = "<font color='red'; > kelas Required </font>";
+    $errors['kelas'] = "<font color='red'; > Kelas Required </font>";
     }
     if (empty($password)) {
         $errors['password'] = "<font color='red'; > Password Required </font>";
@@ -79,7 +79,7 @@ if (isset($_POST['signup-btn'])) {
     $stmt->close();
 
     if ($userCount > 0) {
-        $errors['nim'] = "<font color='red'; > nim sudah di pakai </font>";
+        $errors['nim'] = "<font color='red'; > NIM sudah di pakai </font>";
     }
 
     $angkatanQuery = "SELECT * FROM users WHERE angkatan=? LIMIT 1";
@@ -142,7 +142,7 @@ if (isset($_POST['login-btn'])) {
     // $errors['namalengkap'] = "<font color='red'; > namalengkap Required </font>";
     // }
     if (empty($nim)) {
-    $errors['nim'] = "<font color='red'; > nim Required </font>";
+    $errors['nim'] = "<font color='red'; > NIM Required </font>";
     }
     if (empty($password)) {
         $errors['password'] =  "<font color='red'; > Password Required </font>";
