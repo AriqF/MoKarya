@@ -49,11 +49,11 @@
                                                 <?php endforeach; ?>
                                              </div>
                                     <?php endif; ?>
-                            <p style="font-size: 14px;">Kirimkan permintaan reset password ke email anda</p>
+                            <p style="font-size: 14px;">Kirimkan permintaan reset password ke Email anda</p>
                             <hr style="border-top: 1px solid white; margin-bottom: 36px;">
                             <div class="w-100"></div>
                             <form>
-                                <label class="label control-label">email</label>
+                                <label class="label control-label">Email</label>
                                 <input type="email" class="form-control" name="email" placeholder="email">
                                 <div class="col text-center" style="margin-top: 320px;">
                                     <button name="forgot-password" type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="startbtn" style="margin-top: 10px;">
