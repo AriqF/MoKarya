@@ -17,7 +17,7 @@
 					<h1 class="card-title bg-warning"> Error Page</h1>
 					<h2 class="card-title"> 404 Error</h2>
 					<p class="card-text"> The page you are searching for is not available.</p>
-					<a href="../index" class="btn btn-primary">Go back to home page</a>
+					<a href="../" class="btn btn-primary">Go back to home page</a>
 				</div>
 			</div>
 		</div>
