@@ -44,16 +44,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="User_Regist/dashboard_admin.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                    <a class="nav-link" href="User_Regist/dashboard_admin"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="User_Regist/profile_admin.php"><i class="fas fa-id-card"></i> Profile</a>
+                    <a class="nav-link" href="User_Regist/profile_admin"><i class="fas fa-id-card"></i> Profile</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="User_Regist/users_admin.php"><i class="fas fa-users"></i> Members</a>
+                    <a class="nav-link" href="User_Regist/users_admin"><i class="fas fa-users"></i> Members</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="User_Regist/gallery_admin.php"><i class="fas fa-images"></i> Gallery</a>
+                    <a class="nav-link" href="User_Regist/gallery_admin"><i class="fas fa-images"></i> Gallery</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"><i class="fas fa-sign-out-alt"></i> Sign Out</a>

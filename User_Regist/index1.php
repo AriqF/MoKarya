@@ -15,7 +15,7 @@ if (isset($_GET['password-token'])) {
 }
 //user not login
 if (!isset($_SESSION['id'])) {
-    header('location:login.php');
+    header('location:login');
     exit();
 }
 
@@ -85,7 +85,7 @@ if (!isset($_SESSION['id'])) {
                     
                             <?php elseif($_SESSION['verified']): ?>
 
-                                <a href="dashboard_user.php" style="text-decoration: none;"><button class="btn btn-block btn-lg btn-primary">Masuk &#187</button></a>
+                                <a href="dashboard_user" style="text-decoration: none;"><button class="btn btn-block btn-lg btn-primary">Masuk &#187</button></a>
                             <?php endif; ?>
                             
                         </div>

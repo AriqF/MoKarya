@@ -15,7 +15,7 @@ if (isset($_GET['password-token'])) {
 }
 //user not login
 if (!isset($_SESSION['id'])) {
-    header('location:login.php');
+    header('location:login');
     exit();
 }
 
@@ -68,7 +68,7 @@ if (!isset($_SESSION['id'])) {
             <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="gallery_guest.php"><i class="fas fa-images"></i> Gallery</a>
+                    <a class="nav-link" href="gallery_guest"><i class="fas fa-images"></i> Gallery</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#" onclick="bottomPage()"><i class="fas fa-id-card"></i> Tentang Kami</a>

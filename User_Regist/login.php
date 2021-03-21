@@ -34,7 +34,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     </head>
     <body>
-        <form form class="form" action="login.php" method="post">
+        <form form class="form" action="login" method="post">
         <div class="content">
             <div class="container" id="box" style="padding: 0; margin-top: 20px;">
                 <div class="row">
@@ -58,7 +58,7 @@
                                 <label class="label control-label">Password</label>
                                 <input type="password" class="form-control" name="password" placeholder="password">
                                 <div class="col text-center" style="margin-top: 240px;">
-                                    <a href="register.php">saya belum memiliki akun</a> <a href="forgotPassword.php"> / lupa password?</a>
+                                    <a href="register">saya belum memiliki akun</a> <a href="forgotPassword"> / lupa password?</a>
                                     <div class="w-100"></div>
                                     <button name="login-btn" type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="startbtn" style="margin-top: 10px;">
                                         Login

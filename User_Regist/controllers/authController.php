@@ -121,7 +121,7 @@ if (isset($_POST['signup-btn'])) {
         // flash message
         $_SESSION['message'] = "You are now logged in";
         $_SESSION['alert-class'] = "alert-success";
-        header('location: index1.php');
+        header('location: index1');
         exit();
         } else{
             $errors['db_error'] = "<font color='red'; > Database error: failed to register </font>";
@@ -168,7 +168,7 @@ if (isset($_POST['login-btn'])) {
             // flash message
             $_SESSION['message'] = "You are now logged in";
             $_SESSION['alert-class'] = "alert-success";
-            header('location: dashboard_user.php');
+            header('location: dashboard_user');
             exit();
     
         } else {
@@ -189,7 +189,7 @@ if (isset($_GET['logout'])) {
     unset($_SESSION['angkatan']);
     unset($_SESSION['kelas']);
     unset($_SESSION['verified']);
-    header('location:../index.php');
+    header('location:../index');
     exit();
 }
 
@@ -218,7 +218,7 @@ function verifyUser($token)
             // flash message
             $_SESSION['message'] = "Your Email was Succesfully verified";
             $_SESSION['alert-class'] = "alert-success";
-            header('location: index1.php');
+            header('location: index1');
             exit();
         }
     } else {
@@ -243,7 +243,7 @@ if (isset($_POST['forgot-password'])) {
         $user = mysqli_fetch_assoc($result);
         $token = $user['token'];
         SendPasswordResetLink($email, $token);
-        header('location: password_message.php');
+        header('location: password_message');
         exit(0);
     }
 
@@ -269,7 +269,7 @@ if (isset($_POST['reset-password-btn'])) {
         $sql = "UPDATE users SET password='$password' WHERE email='$email'";
         $result = mysqli_query($conn, $sql);
         if ($result) {
-            header('location: login.php');
+            header('location: login');
             exit(0);
         }
     }
@@ -283,7 +283,7 @@ function resetPassword($token)
     $result = mysqli_query($conn, $sql);
     $user = mysqli_fetch_assoc($result);
     $_SESSION['email'] = $user['email'];
-    header('location: reset_password.php');
+    header('location: reset_password');
     exit(0);
 }
 

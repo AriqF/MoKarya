@@ -55,10 +55,10 @@
               <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="User_Regist/login.php">Login</a>
+              <a class="nav-link" href="User_Regist/login">Login</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="User_Regist/register.php">Register</a>
+              <a class="nav-link" href="User_Regist/register">Register</a>
             </li>
           </ul>
         </div>
@@ -91,11 +91,11 @@
                           <h1 class="font-weight-semibold ml3 fadeInDown">MoKarya</h1>
                           <p class="lead fadeInRight">Website Projek Monitor Karya Mahasiswa <br> D4 Manajemen Informatika </p>
                           <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" id="startbtn">
-                            <a href="User_Regist/login.php" class="redirect-btn">Unggah Karya <!--Login Mhs--></a>
+                            <a href="User_Regist/login" class="redirect-btn">Unggah Karya <!--Login Mhs--></a>
                           </button>
                           <div class="w-100"></div>
                           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="startbtn2">
-                            <a href="User_Regist/gallery_guest.php" class="redirect-btn">Lihat Gallery &#187 <!--To Gallery Page Guest--></a>
+                            <a href="User_Regist/gallery_guest" class="redirect-btn">Lihat Gallery &#187 <!--To Gallery Page Guest--></a>
                           </button>
                         </td>
                       </tr>

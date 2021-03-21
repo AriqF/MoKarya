@@ -34,7 +34,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     </head>
     <body>
-        <form form class="form" action="register.php" method="post">
+        <form form class="form" action="register" method="post">
         <div class="content">
             <div class="container" id="box" style="padding: 0; margin-top: 20px;">
                 <div class="row">
@@ -80,7 +80,7 @@
                                 <label class="label control-label">Confirm Password</label>
                                 <input type="password" class="form-control" name="passwordConf" placeholder="confirm password">
                                 <div class="col text-center" style="margin-top: 15px;">
-                                    <a href="login.php">saya sudah memiliki akun &#10003;</a>
+                                    <a href="login">saya sudah memiliki akun &#10003;</a>
                                     <div class="w-100"></div>
                                     <button name="signup-btn" type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="startbtn" style="margin-top: 10px;">
                                         Sign Up
