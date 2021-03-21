@@ -75,7 +75,7 @@ if (!isset($_SESSION['id'])) {
                     <a class="nav-link" href="profile-user"><i class="fas fa-id-card"></i> Profile</a>
                 </li>               
                 <li class="nav-item">
-                    <a class="nav-link" href="../index?logout=1"><i class="fas fa-sign-out-alt"></i> Sign Out</a>
+                    <a class="nav-link" href="index1?logout=1"><i class="fas fa-sign-out-alt"></i> Sign Out</a>
                 </li>
             </ul>
             </div>
