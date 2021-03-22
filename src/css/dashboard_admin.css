@@ -73,6 +73,7 @@ tr td{
 .btn{
     min-width: 60% !important;
     width: 60%;
+    max-width: 100%;
 }
 .fadeInRight{
     animation: fadeInRight 3s ease;
