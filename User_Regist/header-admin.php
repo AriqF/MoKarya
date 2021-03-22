@@ -44,7 +44,7 @@
                     <li class="nav-item <?php if($currentPage =='dashboard'){echo 'active';}?>">
                         <a class="nav-link" href="dashboard_admin"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
                     </li>
-                    <li class="nav-item dropdown <?php if($currentPage =='galleryData' || $currentPage == 'previewGalery'){echo 'active';}?>">
+                    <li class="nav-item dropdown <?php if($currentPage =='galleryData' || $currentPage == 'previewGalery' || $currentPage =='uploadGallery_adm'){echo 'active';}?>">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-images"></i>  Gallery
                         </a>
