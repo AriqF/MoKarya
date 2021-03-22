@@ -1,31 +1,39 @@
 <?php
     $currentPage = 'dashboard';   
     include 'header-admin.php';
+    include 'config/db.php';
+
+    $queryUs = mysqli_query($conn, "SELECT nim FROM users");
+    $totalUsers = mysqli_num_rows($queryUs);
+
 ?>
 
 <section>
-    <div class="row">
-        <div class="col-6 col-md-4">
-            <div class="container" id="box3">
-                <h2>Total user: </h2>
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-6 col-md-4 d-flex justify-content-around">
+                <div id="box3">
+                    <h4>Total User: </h4>
+                    <h5><?php echo $totalUsers; ?></h5>
+                </div>
             </div>
-        </div>
-        <div class="col-6 col-md-4">
-            <div class="container" id="box3">
-                <h2>Total user: </h2>
+            <div class="col-6 col-md-4 d-flex justify-content-around">
+                <div id="box3">
+                    <h4>Total Admin: </h4>
+                    <p>-</p>
+                </div>
             </div>
-        </div>
-        <div class="col-6 col-md-4">
-            <div class="container" id="box3">
-                <h2>Total user: </h2>
+            <div class="col-6 col-md-4 d-flex justify-content-around">
+                <div id="box3">
+                    <h4>Total Karya: </h4>
+                    <p>-</p>
+                </div>
             </div>
-        </div>
-    
 
-
-    
+        </div>
     </div>
 
-    </body>
+
+</body>
 </html>
 </section>
