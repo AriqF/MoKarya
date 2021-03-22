@@ -50,8 +50,9 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #4527a4;">
                             <a class="dropdown-item <?php if($currentPage =='galleryData'){echo 'active';}?>" href="gallery-data.php">Gallery Data</a>
-                        <div class="dropdown-divider"></div>
-                            <a class="dropdown-item <?php if($currentPage =='previewGalery'){echo 'active';}?>" href="#">Preview Gallery</a>
+                            <a class="dropdown-item <?php if($currentPage =='previewGalery'){echo 'active';}?>" href="#">Preview Gallery</a>   
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item <?php if($currentPage =='uploadGallery_adm'){echo 'active';}?>" href="unggahGallery-admin.php">Unggah Data Gallery</a>
                         </div>
                     </li>
                     <li class="nav-item <?php if($currentPage =='member'){echo 'active';}?>">
