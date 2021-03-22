@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>MoKarya | Admin Profile</title>
+        <title>MoKarya | Admin </title>
          <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -42,24 +42,21 @@
             <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                     <li class="nav-item <?php if($currentPage =='dashboard'){echo 'active';}?>">
-                        <a class="nav-link" href="dashboard_admin"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                        <a class="nav-link" href="admin-dashboard.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
                     </li>
                     <li class="nav-item dropdown <?php if($currentPage =='galleryData' || $currentPage == 'previewGalery' || $currentPage =='uploadGallery_adm'){echo 'active';}?>">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-images"></i>  Gallery
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #4527a4;">
-                            <a class="dropdown-item <?php if($currentPage =='galleryData'){echo 'active';}?>" href="gallery-data.php">Gallery Data</a>
+                            <a class="dropdown-item <?php if($currentPage =='galleryData'){echo 'active';}?>" href="admin-gallery-data.php">Gallery Data</a>
                             <a class="dropdown-item <?php if($currentPage =='previewGalery'){echo 'active';}?>" href="#">Preview Gallery</a>   
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item <?php if($currentPage =='uploadGallery_adm'){echo 'active';}?>" href="unggahGallery-admin.php">Unggah Data Gallery</a>
+                            <a class="dropdown-item <?php if($currentPage =='uploadGallery_adm'){echo 'active';}?>" href="admin-unggah.php">Unggah Data Gallery</a>
                         </div>
                     </li>
-                    <li class="nav-item <?php if($currentPage =='member'){echo 'active';}?>">
-                        <a class="nav-link" href="members-admin"><i class="fas fa-users"></i> Members</a>
-                    </li>
                     <li class="nav-item <?php if($currentPage =='profile'){echo 'active';}?>">
-                        <a class="nav-link" href="profile-admin"><i class="fas fa-id-card"></i> Profile</a>
+                        <a class="nav-link" href="admin-profile.php"><i class="fas fa-id-card"></i> Profile</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"><i class="fas fa-sign-out-alt"></i> Sign Out</a>

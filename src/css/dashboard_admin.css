@@ -9,7 +9,6 @@ body, html{
     scroll-behavior: smooth;
     background-color: #2e313c;
 }
-
 .navbar{
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.3);
     z-index: 5;
@@ -42,11 +41,6 @@ h2{
     bottom: 0;
     max-height: 30vh;
 }
-.box {
-    background: rgb(192,34,234);
-    background: linear-gradient(273deg, rgba(192,34,234,1) 13%, rgba(102,78,229,1) 82%);
-    color: white;
-}
 .separator{
     border-top: 1px solid #B3B1B2;
 }
@@ -57,6 +51,15 @@ input{
 #box{
     background-color: #3448AB;
     width: 90%;
+    padding: 20px;
+    border-radius: 12px; 
+}
+#box3{
+    background-color: #3448AB;
+    margin: 20px;
+    color:white; 
+    padding-top: 30px; 
+    width:fit-content;
     padding: 20px;
     border-radius: 12px; 
 }
