@@ -3,7 +3,7 @@
     include 'header-admin.php';
 ?>
 <section>
-<div class="container anim" style=" margin-top: 50px; color:white; padding-top: 30px; width:fit-content">
+<div class="container anim" id="box" style=" margin-top: 50px; color:white; padding-top: 30px; width:fit-content">
             <div class="d-flex justify-content-center">
                 <div >
                     <!--Form Box-->
