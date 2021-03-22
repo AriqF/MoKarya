@@ -1,9 +1,10 @@
 <?php
-    $currentPage = 'profile';
+    $currentPage = 'member';
     include 'header-admin.php';
 ?>
+
 <section>
-        <div class="container op" id="box" style=" margin-top: 50px; color:white; padding-top: 30px;">
+<div class="container op" id="box" style=" margin-top: 50px; color:white; padding-top: 30px;">
             <div class="row justify-content-md-center">
                 <div class="col-md-auto">
                     <h1 style="text-align: center;" class="fadeInUp">Admin Profile Settings</h1>
