@@ -106,11 +106,11 @@
                                     <img src="../src/img/1.jpg" class="img-fluid img-thumbnail">
                                 </td>                          
                                 <td> <!--aksi-->                                  
-                                    <button name="edit-pass-btn" type="submit" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; width: 30%; border-radius: 5px" >
+                                    <button name="edit-pass-btn" type="submit" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; border-radius: 5px" >
                                         Edit
                                     </button>
                                     <div class="w-100"></div>
-                                    <button name="edit-pass-btn" type="submit" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; width: 30%; border-radius: 5px" >
+                                    <button name="edit-pass-btn" type="submit" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; border-radius: 5px" >
                                         Hapus
                                     </button>                                                             
                                 </td>                               
@@ -130,11 +130,11 @@
                                     <img src="../src/img/2.jpg" class="img-fluid img-thumbnail">
                                 </td>                          
                                 <td> <!--aksi-->
-                                    <button name="edit-pass-btn" type="submit" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; width: 30%; border-radius: 5px" >
+                                    <button name="edit-pass-btn" type="submit" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; border-radius: 5px" >
                                         Edit
                                     </button>
                                     <div class="w-100"></div>
-                                    <button name="edit-pass-btn" type="submit" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; width: 30%; border-radius: 5px" >
+                                    <button name="edit-pass-btn" type="submit" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; border-radius: 5px" >
                                         Hapus
                                     </button>                             
                                 </td>  
@@ -154,11 +154,11 @@
                                     <img src="../src/img/3.jpg" class="img-fluid img-thumbnail">
                                 </td>                          
                                 <td> <!--aksi-->
-                                    <button name="edit-pass-btn" type="submit" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; width: 30%; border-radius: 5px" >
+                                    <button name="edit-pass-btn" type="submit" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px;  border-radius: 5px" >
                                         Edit
                                     </button>
                                     <div class="w-100"></div>
-                                    <button name="edit-pass-btn" type="submit" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; width: 30%; border-radius: 5px" >
+                                    <button name="edit-pass-btn" type="submit" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; border-radius: 5px" >
                                         Hapus
                                     </button>                                      
                                 </td>  
