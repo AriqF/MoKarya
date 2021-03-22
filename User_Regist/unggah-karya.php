@@ -46,10 +46,6 @@ if (!isset($_SESSION['id'])) {
         <link href="../src/css/dashboard_user.css" type="text/css" rel="stylesheet"> 
 
         <script src="../src/js/galleryScript.js"></script>
-
-        <!--Swiper.js-->
-        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
-        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
          
         <!--Google Fonts-->
         <link rel="preconnect" href="https://fonts.gstatic.com">
