@@ -52,11 +52,7 @@
                         <i class="fas fa-images"></i>  Gallery
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #4527a4;">
-<<<<<<< Updated upstream:User_Regist/admin/header-admin.php
                             <a class="dropdown-item <?php if($currentPage =='galleryData'){echo 'active';}?>" href="admin-gallery-data">Gallery Data</a>
-=======
-                            <a class="dropdown-item <?php if($currentPage =='galleryData'){echo 'active';}?>" href="admin-gallery-data.php">Data Gallery </a>
->>>>>>> Stashed changes:User_Regist/header-admin.php
                             <a class="dropdown-item <?php if($currentPage =='previewGalery'){echo 'active';}?>" href="#">Preview Gallery</a>   
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item <?php if($currentPage =='uploadGallery_adm'){echo 'active';}?>" href="admin-unggah">Unggah Data Gallery</a>
