@@ -54,12 +54,16 @@ input{
     padding: 20px;
     border-radius: 12px; 
 }
-#box3{
+.box3{
     background-color: #3448AB;
     width: fit-content;
     text-align: center;
     padding: 20px;
     border-radius: 12px; 
+}
+.box3:hover{
+    transform: scale(1.04);
+    transition: 0.5s;
 }
 .jumbotron{
     margin: 15px;
