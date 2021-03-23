@@ -43,7 +43,8 @@
                             
 
                             <label class="label control-label">Deskripsi</label>
-                            <input type="text"  class="form-control" placeholder="tulis deskripsi karya secara singkat" value="<?php echo $data['deskripsi']; ?>"></input>
+                            <input type="text" name="deskripsi" class="form-control" placeholder="tulis deskripsi karya secara singkat" 
+                            value="<?php echo $data['deskripsi']; ?>">
 
                             <label class="label control-label">Anggota</label>
                             <input type="text" class="form-control" name="anggota" placeholder="pisahkan dengan koma jika anggota > 1" value="<?php echo $data['anggota']; ?>" >
