@@ -27,7 +27,7 @@
   }         
   ?>
 <section>
-<div class="container anim" style=" margin-top: 50px; color:white; padding-top: 30px; width:fit-content">
+<div class="container anim" id="box" style=" margin-top: 50px; color:white; padding-top: 30px; width:fit-content">
             <div class="d-flex justify-content-center">
                 <div >
                     <!--Form Box-->
@@ -55,7 +55,7 @@
                             <i style="float: left;font-size:16px;color: red;">Abaikan jika tidak merubah gambar karya.</i>                        
                             <div class="w-100"></div>
                             <button name="submit-btn" type="submit" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; width: 30%; border-radius: 5px" >
-                                Simpan Perubahan
+                                Simpan
                             </button>
                         </form>
                     </div>
