@@ -47,9 +47,15 @@
        <tr>
           <td><?php echo $ID; ?></td>
           <td><?php echo $row['judul']; ?></td>
+<<<<<<< HEAD
           <td><?php echo $row['deskripsi']; ?></td> <!--<td><.? php echo substr($row['deskripsi'], 0, 20); ?.>...</td> -->
           <td><?php echo $row['anggota']; ?></td>
           <td style="text-align: center;"><img src="gambar/<?php echo $row['foto_karya']; ?>" class="img-fluid img-thumbnail"></td>
+=======
+          <td><?php echo substr($row['deskripsi'], 0, 50); ?>...</td>
+          <td><?php echo $row['anggota']; ?></td>
+          <td style="text-align: center;"><img class="img-fluid img-thumbnail" src="gambar/<?php echo $row['foto_karya']; ?>"></td>
+>>>>>>> 7287755b5d2e42ce6012e57dc915d2fde5be0091
           <td>
             <a href="admin-unggah-edit?id=<?php echo $row['id']; ?>" style="text-decoration:none"> <button name="edit-pass-btn" type="submit" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; border-radius: 5px" >Edit</button></a>
             <a href="admin-unggah-hapus-proses?id=<?php echo $row['id']; ?>" style="text-decoration:none" onclick="return confirm('Anda yakin akan menghapus data ini?')"><button nname="edit-pass-btn" type="submit" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; border-radius: 5px">Hapus</button></a>
