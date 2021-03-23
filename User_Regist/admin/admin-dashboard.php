@@ -56,11 +56,7 @@
             <div id="verifiedUserChart" style="height: 220px;"></div>           
         </div>
     </div>
-    </div>
-
-
-
-    
+    </div> 
 
 <script>
 new Morris.Bar({
