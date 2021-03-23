@@ -56,12 +56,16 @@ input{
 }
 #box3{
     background-color: #3448AB;
-    margin: 20px;
-    color:white; 
-    padding-top: 30px; 
-    width:fit-content;
+    width: fit-content;
+    text-align: center;
     padding: 20px;
     border-radius: 12px; 
+}
+.jumbotron{
+    margin: 15px;
+    padding: 15px;
+    background-color: #2e313c;
+    color: white;
 }
 td, th{
     vertical-align: middle;
