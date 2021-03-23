@@ -1,8 +1,7 @@
 <?php
     $currentPage = 'dashboard';   
     include 'header-admin.php';
-    include 'config/db.php';
-
+    
     $queryUs = mysqli_query($conn, "SELECT nim FROM users");
     $totalUsers = mysqli_num_rows($queryUs);
 
