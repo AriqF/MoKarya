@@ -33,6 +33,12 @@
         <link href="https://fonts.googleapis.com/css2?family=Epilogue&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 
+        <!--Morris JS-->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+
         <!--font awesome-->
         <script src="https://kit.fontawesome.com/babb4f3fd7.js" crossorigin="anonymous"></script>
     </head>
