@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 10, 2021 at 10:00 AM
+-- Generation Time: Mar 22, 2021 at 05:22 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.4.15
 
@@ -20,6 +20,39 @@ SET time_zone = "+00:00";
 --
 -- Database: `mokarya`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `id_admin` int(11) NOT NULL,
+  `username_admin` varchar(200) NOT NULL,
+  `password_admin` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id_admin`, `username_admin`, `password_admin`) VALUES
+(2, 'admin', 'admin');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `data_karya`
+--
+
+CREATE TABLE `data_karya` (
+  `id` int(11) NOT NULL,
+  `judul` varchar(255) NOT NULL,
+  `deskripsi` text NOT NULL,
+  `anggota` varchar(255) NOT NULL,
+  `foto_karya` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -44,11 +77,25 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `namalengkap`, `email`, `nim`, `angkatan`, `kelas`, `verified`, `token`, `password`) VALUES
-(3, 'M alif H', 'muhammad.19065@mhs.unesa.ac.id', '19051397065', '2019', 'A', 1, '5c414b4d5bd0e718dd9654f729add1dea0fc78c9371484c9796efabae4f9bcb77303485a99a706925c74f7602f94dddd814d', '$2y$10$addnrOgV6NvCCxIz9LYVJeYMtyVyTIq2qf9sijtr43LV1bJ23Y1KW');
+(6, 'Muhammad Alif Hidayatullah', 'alifw50@gmail.com', '19051397066', '2019', 'A', 1, '6363092e83dcc4692e514425d07719514afc92955733058f5db9a66110a34f85719bf1a8ae7d12ae202a4700c6faf6bd293d', '$2y$10$GtQ9K5NAiV0BjKzHjhZ4z.8rfVZRyBAldJWyh465OMCnOtbKzZMj.'),
+(24, 'Muhammad Alif Hidayatullah', 'muhammad.19065@mhs.unesa.ac.id', '19051397065', '2019', 'B', 1, '6170648398964cdd64b9c675f821daa3a13056b218ef8ba7e121263546322f556aebc51820c3a2852aa07362c48cc3393b1b', '$2y$10$UaHsAqGPJUdpY/vQsgC43.BjN9OgS8.SGoEuNJk1Mox47KoXhlRZK'),
+(26, 'mokarya', 'mokaryad4@gmail.com', '123456', '2000', 'Z', 1, 'b009410446f5219f776a11baffeae2a18f5a384e9aa49df06100c76b20b2deda18874611f5ab2b2378310f49ec7c91615c72', '$2y$10$GBsJ3kpA0DNI5mCPEthJSOkf3LUtL.gS82dusnJ0R27lr4yEp5pme');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id_admin`);
+
+--
+-- Indexes for table `data_karya`
+--
+ALTER TABLE `data_karya`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `users`
@@ -62,10 +109,22 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `data_karya`
+--
+ALTER TABLE `data_karya`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
