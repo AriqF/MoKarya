@@ -1,10 +1,12 @@
 <?php 
 
-require '../config/db.php'; 
 
 session_start();
+require '../config/db.php'; 
 
 $errors = array();
+$user_admin = "";
+$password_admin = "";
 
 
 // LOGIKA 1
@@ -32,7 +34,6 @@ $errors = array();
 
 
 
-
 //LOGIKA 2
 if (isset($_POST['login-btn'])) {
     $user_admin = $_POST['user_admin'];
@@ -53,8 +54,10 @@ if (isset($_POST['login-btn'])) {
       $stmt->execute();
       $result = $stmt->get_result();
       $admin = $result->fetch_assoc();
-    
-      if (password_verify($password_admin, $admin['password_admin'])) {
+      $row_count= $result->num_rows;
+      //print_r($row_count); die;// DEBUG purpose 
+        
+      if ($password_admin === $admin['password_admin']) {
             //login sucess
             $_SESSION['id_admin'] = $admin['id_admin'];
             $_SESSION['user_admin'] = $admin['user_admin'];
@@ -62,11 +65,20 @@ if (isset($_POST['login-btn'])) {
             exit();
     
         } else {
-            echo "<script>alert('Berhasil masuk');window.location='admin-dashboard';</script>";
+            echo "<script>alert('gagal masuk');window.location='login-admin';</script>";
+            //echo "<script>alert('Berhasil masuk');window.location='admin-dashboard';</script>";
         }
         
     }
 
 }
 
+//logout user
+if (isset($_GET['logout'])) {
+    session_destroy();
+    unset($_SESSION['id_admin']);
+    unset($_SESSION['user_admin']);
+    header('location:../');
+    exit();
+}
 ?>

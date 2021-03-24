@@ -1,9 +1,6 @@
 <?php 
+require_once 'admin-login-proses.php'; 
 
-require '../config/db.php';
-
-
-$errors = array();
 
 ?>
 <!DOCTYPE html>
@@ -64,10 +61,9 @@ $errors = array();
                                 <label class="label control-label">Password Admin</label>
                                 <input type="password" class="form-control" name="password_admin" placeholder="password admin">
                                 <div class="col text-center" style="margin-top: 240px;">
-
-                                    <button name="login-btn" type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="startbtn" style="margin-top: 10px;">
-                                        Login
-                                    </button>
+                                <button name="login-btn" type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="startbtn" style="margin-top: 10px;">
+                                    Login
+                                </button>
                                 </div>
                             </form>
                             
