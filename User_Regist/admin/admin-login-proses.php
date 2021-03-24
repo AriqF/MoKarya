@@ -57,7 +57,7 @@ if (isset($_POST['login-btn'])) {
       $row_count= $result->num_rows;
       //print_r($row_count); die;// DEBUG purpose 
         
-      if ($password_admin === $admin['password_admin']) {
+      if ($password_admin === $admin['password_admin']) { //session undefined :(
             //login sucess
             $_SESSION['id_admin'] = $admin['id_admin'];
             $_SESSION['user_admin'] = $admin['user_admin'];
