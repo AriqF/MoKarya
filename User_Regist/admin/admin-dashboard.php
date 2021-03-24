@@ -1,4 +1,12 @@
 <?php
+
+    // session_start();
+    
+    // if(!isset($_SESSION["login-btn"])){
+    //     header('location: login-admin');
+    //     exit;
+    // }
+
     $currentPage = 'dashboard';   
     include 'header-admin.php';
     

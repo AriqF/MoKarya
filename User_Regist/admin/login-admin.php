@@ -1,4 +1,11 @@
-<?php require_once 'controllers/authController.php'; ?>
+<?php 
+
+require '../config/db.php';
+
+
+$errors = array();
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -22,7 +29,7 @@
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
         <!--My css-->
-        <link href="../src/css/registerStyle.css" type="text/css" rel="stylesheet"> 
+        <link href="../../src/css/registerStyle.css" type="text/css" rel="stylesheet"> 
 
         <!--Swiper.js-->
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
@@ -34,14 +41,14 @@
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     </head>
     <body>
-        <form form class="form" action="login" method="post">
+        <form form class="form" action="admin-login-proses" method="POST">
         <div class="content">
             <div class="container" id="box" style="padding: 0; margin-top: 20px;">
                 <div class="row">
                     <div class="col-md-6">
                         <!--Form Box-->
                         <div class="container" id="formBox">
-                            <h2>Login Forms</h2>
+                            <h2>Login Admin</h2>
                             <?php if (count($errors) > 0): ?>
                                      <div class="alert alert-danger">
                                         <?php foreach($errors as $error): ?>
@@ -49,19 +56,15 @@
                                         <?php endforeach; ?>
                                      </div>
                             <?php endif; ?>
-                            <p style="font-size: 14px;">Login agar dapat mulai mengunggah karya-mu!</p>
                             <hr style="border-top: 1px solid white; margin-bottom: 36px;">
                             <div class="w-100"></div>
                             <form>
-                                <label class="label control-label">Email atau NIM</label>
-                                <input type="text" class="form-control" name="nim" placeholder="email atau nim" value="<?php echo $nim; ?>">
-                                <label class="label control-label">Password</label>
-                                <input type="password" class="form-control" name="password" placeholder="password">
+                                <label class="label control-label">Username Admin</label>
+                                <input type="text" class="form-control" name="user_admin" placeholder="username admin">
+                                <label class="label control-label">Password Admin</label>
+                                <input type="password" class="form-control" name="password_admin" placeholder="password admin">
                                 <div class="col text-center" style="margin-top: 240px;">
-                                    <a href="admin/login-admin">login admin</a>
-                                    <br>
-                                    <a href="register">saya belum memiliki akun</a> <a href="forgotPassword"> / lupa password?</a>
-                                    <div class="w-100"></div>
+
                                     <button name="login-btn" type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="startbtn" style="margin-top: 10px;">
                                         Login
                                     </button>
