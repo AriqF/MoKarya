@@ -54,6 +54,18 @@ input{
     padding: 20px;
     border-radius: 12px; 
 }
+.chartBox{
+    background-color: #3E424F;
+    color: white;
+    width: fit-content;
+    padding: 20px;
+    border-radius: 12px; 
+    height: fit-content;
+    width: fit-content;
+}
+tspan{
+    color: white;
+}
 .box3{
     background-color: #3448AB;
     width: fit-content;
@@ -107,6 +119,17 @@ tr td{
 }
 .op{
     animation: open 3s ease;
+}
+.listTrans{
+    animation: fadeInDown 10s ease-out;
+}
+@keyframes slowOpac{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 @keyframes open{
     0%{

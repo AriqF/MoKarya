@@ -33,6 +33,12 @@
         <link href="https://fonts.googleapis.com/css2?family=Epilogue&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 
+        <!--Morris JS-->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+
         <!--font awesome-->
         <script src="https://kit.fontawesome.com/babb4f3fd7.js" crossorigin="anonymous"></script>
     </head>
@@ -53,8 +59,8 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #4527a4;">
                             <a class="dropdown-item <?php if($currentPage =='galleryData'){echo 'active';}?>" href="admin-gallery-data">Gallery Data</a>
-                            <a class="dropdown-item <?php if($currentPage =='previewGalery'){echo 'active';}?>" href="#">Preview Gallery</a>   
-                            <div class="dropdown-divider"></div>
+                            <!--<a class="dropdown-item <?//php if($currentPage =='previewGalery'){echo 'active';}?>" href="#">Preview Gallery</a>-->
+                            <!--<div class="dropdown-divider"></div>-->
                             <a class="dropdown-item <?php if($currentPage =='uploadGallery_adm'){echo 'active';}?>" href="admin-unggah">Unggah Data Gallery</a>
                         </div>
                     </li>
