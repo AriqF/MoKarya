@@ -3,10 +3,10 @@
     $currentPage = 'dashboard';   
     include 'header-admin.php';
     
-    $queryUs = mysqli_query($conn, "SELECT nim FROM users");
+    $queryUs = mysqli_query($conn, "SELECT id FROM users WHERE usertype = 'user'");
     $totalUsers = mysqli_num_rows($queryUs);
 
-    $queryAd = mysqli_query($conn, "SELECT id_admin FROM admin");
+    $queryAd = mysqli_query($conn, "SELECT id FROM users WHERE usertype = 'admin' ");
     $totalAdmin = mysqli_num_rows($queryAd);
 
     $queryKar = mysqli_query($conn, "SELECT id FROM data_karya");
