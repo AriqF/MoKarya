@@ -83,8 +83,14 @@ if (!isset($_SESSION['id'])) {
                             <a class="dropdown-item <?php if($currentPage =='uploadGallery_adm'){echo 'active';}?>" href="admin-unggah">Unggah Data Gallery</a>
                         </div>
                     </li>
-                    <li class="nav-item <?php if($currentPage =='usersConfig'){echo 'active';}?>">
-                        <a class="nav-link" href="admin-usersConfig"><i class="fas fa-users"></i> Users</a>
+                    <li class="nav-item dropdown  <?php if($currentPage =='usersConfig' || $currentPage =='userDataEdit'){echo 'active';}?>">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-users"></i> Users
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #4527a4;">
+                            <a class="dropdown-item <?php if($currentPage =='usersConfig'){echo 'active';}?>" href="admin-usersConfig">User Data</a>
+                            <a class="dropdown-item <?php if($currentPage =='userDataEdit'){echo 'active';}?>" href="admin-usersEditData">Edit User Data</a>
+                        </div>
                     </li>
                     <li class="nav-item <?php if($currentPage =='profile'){echo 'active';}?>">
                         <a class="nav-link" href="admin-profile"><i class="fas fa-id-card"></i> Profile</a>
