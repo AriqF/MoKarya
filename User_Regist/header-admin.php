@@ -83,6 +83,9 @@ if (!isset($_SESSION['id'])) {
                             <a class="dropdown-item <?php if($currentPage =='uploadGallery_adm'){echo 'active';}?>" href="admin-unggah">Unggah Data Gallery</a>
                         </div>
                     </li>
+                    <li class="nav-item <?php if($currentPage =='usersConfig'){echo 'active';}?>">
+                        <a class="nav-link" href="admin-usersConfig"><i class="fas fa-users"></i> Users</a>
+                    </li>
                     <li class="nav-item <?php if($currentPage =='profile'){echo 'active';}?>">
                         <a class="nav-link" href="admin-profile"><i class="fas fa-id-card"></i> Profile</a>
                     </li>
