@@ -57,8 +57,10 @@
                                 <input type="text" class="form-control" name="nim" placeholder="email atau nim" value="<?php echo $nim; ?>">
                                 <label class="label control-label">Password</label>
                                 <input type="password" class="form-control" name="password" placeholder="password">
+
+                                <input type="hidden" class="form-control" name="usertype" value="user">
+
                                 <div class="col text-center" style="margin-top: 240px;">
-                                    <a href="admin/login-admin">login admin</a>
                                     <br>
                                     <a href="register">saya belum memiliki akun</a> <a href="forgotPassword"> / lupa password?</a>
                                     <div class="w-100"></div>

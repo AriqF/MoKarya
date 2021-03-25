@@ -12,6 +12,7 @@ $email = "";
 $nim = "";
 $angkatan = "";
 $kelas = "";
+$usertype = "";
 
 // if user click sign up button
 if (isset($_POST['signup-btn'])) {
@@ -22,6 +23,7 @@ if (isset($_POST['signup-btn'])) {
     $kelas = $_POST['kelas'];
     $password = $_POST['password'];
     $passwordConf = $_POST['passwordConf'];
+    $usertype = $_POST['usertype'];
 
     // validation
     if (empty($namalengkap)) {
@@ -104,9 +106,9 @@ if (isset($_POST['signup-btn'])) {
         $token =  bin2hex(random_bytes(50));
         $verified = FALSE;
 
-        $sql = "INSERT INTO users (namalengkap, email, nim, angkatan, kelas, verified, token, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO users (namalengkap, email, nim, angkatan, kelas, verified, token, password,usertype) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param('sssssbss', $namalengkap, $email, $nim, $angkatan, $kelas, $verified, $token, $password);
+        $stmt->bind_param('sssssbsss', $namalengkap, $email, $nim, $angkatan, $kelas, $verified, $token, $password, $usertype);
 
         if ($stmt->execute()) {
         //login user automatic
@@ -136,6 +138,7 @@ if (isset($_POST['login-btn'])) {
     //$namalengkap = $_POST['namalengkap'];
     $nim = $_POST['nim'];
     $password = $_POST['password'];
+    $usertype = $_POST['usertype'];
 
     // validation
     // if (empty($namalengkap)) {
@@ -149,14 +152,34 @@ if (isset($_POST['login-btn'])) {
     }
 
     if (count($errors) === 0) {
-      $sql = "SELECT * FROM users WHERE email=? OR nim=? LIMIT 1"; //namalengkap=? 
+      $sql = "SELECT * FROM users WHERE email=? OR nim=? AND usertype=? LIMIT 1"; //namalengkap=? 
       $stmt = $conn->prepare($sql);
-      $stmt->bind_param('ss', $nim, $nim); //$namalengkap
+      $stmt->bind_param('sss', $nim, $nim, $usertype); //$namalengkap
       $stmt->execute();
       $result = $stmt->get_result();
       $user = $result->fetch_assoc();
     
       if (password_verify($password, $user['password'])) {
+
+        if($user['usertype'] == "admin")
+        {
+            //login sucess
+            $_SESSION['id'] = $user['id'];
+            $_SESSION['namalengkap'] = $user['namalengkap'];
+            $_SESSION['email'] = $user['email'];
+            $_SESSION['nim'] = $user['nim']; //namalengkap
+            $_SESSION['angkatan'] = $user['angkatan'];
+            $_SESSION['kelas'] = $user['kelas'];
+            $_SESSION['verified'] = $user['verified'];
+            // flash message
+            $_SESSION['message'] = "You are now logged in";
+            $_SESSION['alert-class'] = "alert-success";
+            header('location: admin-dashboard');
+            exit();
+        }
+
+        else if($user['usertype'] == "user")
+        {
             //login sucess
             $_SESSION['id'] = $user['id'];
             $_SESSION['namalengkap'] = $user['namalengkap'];
@@ -170,6 +193,8 @@ if (isset($_POST['login-btn'])) {
             $_SESSION['alert-class'] = "alert-success";
             header('location: dashboard_user');
             exit();
+        }
+            
     
         } else {
             $errors['login_fail'] = "<font color='red'; >Wrong Credentials </font>";

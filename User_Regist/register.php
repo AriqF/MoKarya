@@ -79,6 +79,9 @@
                                 <input type="password" class="form-control" name="password" placeholder="password">
                                 <label class="label control-label">Confirm Password</label>
                                 <input type="password" class="form-control" name="passwordConf" placeholder="confirm password">
+
+                                <input type="hidden" class="form-control" name="usertype" value="user">
+
                                 <div class="col text-center" style="margin-top: 15px;">
                                     <a href="login">saya sudah memiliki akun &#10003;</a>
                                     <div class="w-100"></div>
