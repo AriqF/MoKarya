@@ -3,7 +3,7 @@
     include 'header-admin.php';
 ?>
 <section>
-<div class="container mw-100" id="box" style=" color:white; padding-top: 30px; margin-top: 60px; width:100%;">
+<div class="container mw-100 animwo" id="box" style=" color:white; padding-top: 30px; margin-top: 60px; width:90%;">
                 <div class="row justify-content-md-center">
                     <div class="col-md-auto">
                         <h1 style="text-align: center;" class="fadeInUp">User Data Settings</h1>
@@ -44,14 +44,14 @@
       {
       ?>
        <tr>
-          <td style="width: fit-content;"><?php echo $ID; ?></td>
-          <td><?php echo $row['namalengkap']; ?></td>
-          <td style="width: 30%;"><?php echo $row['email']; ?></td> <!--<td><.? php echo substr($row['deskripsi'], 0, 20); ?.>...</td> -->
-          <td><?php echo $row['nim']; ?></td>
-          <td><?php echo $row['angkatan']; ?></td>
-          <td><?php echo $row['kelas']; ?></td>
-          <td><?php echo $row['verified']; ?></td>
-          <td>
+          <td class="td-sm"><?php echo $ID; ?></td>
+          <td class="td-sm"><?php echo $row['namalengkap']; ?></td>
+          <td style="width: 20%;"><abbr title="<?php echo $row['email']; ?>" style="border: none; text-decoration: none;"><?php echo substr($row['email'], 0 ,31); ?></abbr></td> <!--<td><.? php echo substr($row['deskripsi'], 0, 20); ?.>...</td> -->
+          <td class="td-sm"><?php echo $row['nim']; ?></td>
+          <td class="td-sm"><?php echo $row['angkatan']; ?></td>
+          <td class="td-sm"><?php echo $row['kelas']; ?></td>
+          <td class="td-sm"><?php echo $row['verified']; ?></td>
+          <td class="td-sm">
             <a href="admin-user-edit?id=<?php echo $row['id']; ?>" style="text-decoration:none"> <button name="edit-pass-btn" type="submit" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; border-radius: 5px; width:fit-content" >Edit</button></a>
             <a href="admin-user-hapus-proses?id=<?php echo $row['id']; ?>" style="text-decoration:none" onclick="return confirm('Anda yakin akan menghapus data ini?')"><button name="edit-pass-btn" type="submit" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; border-radius: 5px; width:fit-content">Hapus</button></a>
           </td>

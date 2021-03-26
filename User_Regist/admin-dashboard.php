@@ -73,7 +73,8 @@ new Morris.Bar({
 
   hidehover:false,
 
-  resize: true
+  resize: true,
+  barColors: ['#2F5AE2']
 });
 new Morris.Donut({
   element: 'verifiedUserChart',
@@ -81,7 +82,6 @@ new Morris.Donut({
     { label: 'Verified-User', value: <?php echo $totalVerUs; ?>},
     { label: 'Unverified-User', value:  <?php echo $totalNVerUs; ?>}, // ubah <.?php echo $totalNVerUs; ?> ke angka jika ingin melihat demo chart dlm keadaan label ini berisi nilai
   ],
-
   resize: true
 });
 var timestamp = '<?=time();?>';

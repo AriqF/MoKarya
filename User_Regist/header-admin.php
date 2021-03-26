@@ -49,8 +49,6 @@ if (!isset($_SESSION['id'])) {
          
         <!--Google Fonts-->
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Epilogue&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 
         <!--Morris JS-->
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
@@ -62,7 +60,7 @@ if (!isset($_SESSION['id'])) {
         <script src="https://kit.fontawesome.com/babb4f3fd7.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4527a4;">
+        <nav class="navbar navbar-expand-lg navbar-dark">
             <a class="navbar-brand" href="#">Welcome, <?php echo $_SESSION['namalengkap']; ?> </a> 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -76,21 +74,15 @@ if (!isset($_SESSION['id'])) {
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-images"></i>  Gallery
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #4527a4;">
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item <?php if($currentPage =='galleryData'){echo 'active';}?>" href="admin-gallery-data">Gallery Data</a>
                             <!--<a class="dropdown-item <?//php if($currentPage =='previewGalery'){echo 'active';}?>" href="#">Preview Gallery</a>-->
                             <!--<div class="dropdown-divider"></div>-->
                             <a class="dropdown-item <?php if($currentPage =='uploadGallery_adm'){echo 'active';}?>" href="admin-unggah">Unggah Data Gallery</a>
                         </div>
                     </li>
-                    <li class="nav-item dropdown  <?php if($currentPage =='usersConfig' || $currentPage =='userDataEdit'){echo 'active';}?>">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-users"></i> Users
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #4527a4;">
-                            <a class="dropdown-item <?php if($currentPage =='usersConfig'){echo 'active';}?>" href="admin-usersConfig">User Data</a>
-                            <a class="dropdown-item <?php if($currentPage =='userDataEdit'){echo 'active';}?>" href="admin-usersEditData">Edit User Data</a>
-                        </div>
+                    <li class="nav-item <?php if($currentPage =='usersConfig'){echo 'active';}?>">
+                        <a class="nav-link" href="admin-usersConfig"><i class="fas fa-users"></i> Users </a>
                     </li>
                     <li class="nav-item <?php if($currentPage =='profile'){echo 'active';}?>">
                         <a class="nav-link" href="admin-profile"><i class="fas fa-id-card"></i> Profile</a>

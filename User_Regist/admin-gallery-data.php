@@ -3,7 +3,7 @@
     include 'header-admin.php';
 ?>
 <section>
-    <div class="container op " id="box" style=" color:white; padding-top: 30px; margin-top: 40px;">
+    <div class="container animwo mw-100" id="box" style=" color:white; padding-top: 30px; margin-top: 40px;">
                 <div class="row justify-content-md-center">
                     <div class="col-md-auto">
                         <h1 style="text-align: center;" class="fadeInUp">Gallery Data Settings</h1>
@@ -51,8 +51,8 @@
           <td><?php echo $row['anggota']; ?></td>
           <td style="text-align: center;"><img src="gambar/<?php echo $row['foto_karya']; ?>" class="img-fluid img-thumbnail"></td>
           <td>
-            <a href="admin-unggah-edit?id=<?php echo $row['id']; ?>" style="text-decoration:none"> <button name="edit-pass-btn" type="submit" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; border-radius: 5px" >Edit</button></a>
-            <a href="admin-unggah-hapus-proses?id=<?php echo $row['id']; ?>" style="text-decoration:none" onclick="return confirm('Anda yakin akan menghapus data ini?')"><button nname="edit-pass-btn" type="submit" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; border-radius: 5px">Hapus</button></a>
+            <a href="admin-unggah-edit?id=<?php echo $row['id']; ?>" style="text-decoration:none"> <button name="edit-pass-btn" type="submit" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; border-radius: 5px; width:fit-content" >Edit</button></a>
+            <a href="admin-unggah-hapus-proses?id=<?php echo $row['id']; ?>" style="text-decoration:none" onclick="return confirm('Anda yakin akan menghapus data ini?')"><button nname="edit-pass-btn" type="submit" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; border-radius: 5px; width:fit-content">Hapus</button></a>
           </td>
       </tr>
          
@@ -61,78 +61,7 @@
       }
 
       ?>
-                                <tr>
-                                    <th scope="row">1</th> <!--id-->
-                                    <td>Lorem</td> <!--judul-->
-                                    <td> <!--desc-->
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                        Nullam sagittis consequat ipsum, 
-                                        non pulvinar nulla sagittis id. 
-                                    </td>
-                                    <td> <!--anggota-->
-                                        <p>Tyo, Bram, Sou</p>
-                                    </td>
-                                    <td> <!--foto-->
-                                        <img src="../src/img/1.jpg" class="img-fluid img-thumbnail">
-                                    </td>                          
-                                    <td> <!--aksi-->                                  
-                                        <button name="edit-pass-btn" type="submit" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; border-radius: 5px" >
-                                            Edit
-                                        </button>
-                                        <div class="w-100"></div>
-                                        <button name="edit-pass-btn" type="submit" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; border-radius: 5px" >
-                                            Hapus
-                                        </button>                                                             
-                                    </td>                               
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th> <!--id-->
-                                    <td>Lorem</td> <!--judul-->
-                                    <td> <!--desc-->
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                        Nullam sagittis consequat ipsum, 
-                                        non pulvinar nulla sagittis id. 
-                                    </td>
-                                    <td> <!--anggota-->
-                                        <p>Tyo, Bram, Sou</p>
-                                    </td>
-                                    <td> <!--foto-->
-                                        <img src="../src/img/2.jpg" class="img-fluid img-thumbnail">
-                                    </td>                          
-                                    <td> <!--aksi-->
-                                        <button name="edit-pass-btn" type="submit" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; border-radius: 5px" >
-                                            Edit
-                                        </button>
-                                        <div class="w-100"></div>
-                                        <button name="edit-pass-btn" type="submit" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; border-radius: 5px" >
-                                            Hapus
-                                        </button>                             
-                                    </td>  
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th> <!--id-->
-                                    <td>Lorem</td> <!--judul-->
-                                    <td> <!--desc-->
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                        Nullam sagittis consequat ipsum, 
-                                        non pulvinar nulla sagittis id. 
-                                    </td>
-                                    <td> <!--anggota-->
-                                        <p>Tyo, Bram, Sou</p>
-                                    </td>
-                                    <td> <!--foto-->
-                                        <img src="../src/img/3.jpg" class="img-fluid img-thumbnail">
-                                    </td>                          
-                                    <td> <!--aksi-->
-                                        <button name="edit-pass-btn" type="submit" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px;  border-radius: 5px" >
-                                            Edit
-                                        </button>
-                                        <div class="w-100"></div>
-                                        <button name="edit-pass-btn" type="submit" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; border-radius: 5px" >
-                                            Hapus
-                                        </button>                                      
-                                    </td>  
-                                </tr>
+     
                             </tbody>
                         </table>
                     </div>
