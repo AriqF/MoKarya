@@ -43,6 +43,9 @@
                             <i class="fas fa-clock"></i>
                              Server Time: <span id="time"></span>
                         </li>
+                        <li>
+                            <button class="btn" onclick="runAlert()">Click Me</button> <!--delete later, try sweet alert-->
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -58,7 +61,8 @@
         </div>
     </div>
     </div> 
-
+<!--import sweet alert-->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script>
 new Morris.Bar({
   element: 'chart',
@@ -92,6 +96,15 @@ function updateTime(){
 $(function(){
   setInterval(updateTime, 1000);
 });
+function runAlert(){
+    Swal.fire(
+  'You Clicked The BTN',
+  'redirect to gallery data',
+  'success'
+).then(function(){
+    window.location.href = "admin-gallery-data.php";
+})
+}
 </script>
 </body>
 </html>

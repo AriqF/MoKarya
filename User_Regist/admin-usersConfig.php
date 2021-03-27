@@ -44,14 +44,14 @@
       {
       ?>
        <tr>
-          <td class="td-sm"><?php echo $ID; ?></td>
-          <td class="td-sm"><?php echo $row['namalengkap']; ?></td>
-          <td style="width: 20%;"><abbr title="<?php echo $row['email']; ?>" style="border: none; text-decoration: none;"><?php echo substr($row['email'], 0 ,31); ?></abbr></td> <!--<td><.? php echo substr($row['deskripsi'], 0, 20); ?.>...</td> -->
-          <td class="td-sm"><?php echo $row['nim']; ?></td>
-          <td class="td-sm"><?php echo $row['angkatan']; ?></td>
-          <td class="td-sm"><?php echo $row['kelas']; ?></td>
-          <td class="td-sm"><?php echo $row['verified']; ?></td>
-          <td class="td-sm">
+          <td class="td-sm sm-font"><?php echo $ID; ?></td>
+          <td class="td-sm sm-font"><?php echo $row['namalengkap']; ?></td>
+          <td style="width:fit-content" class="sm-font"><abbr title="<?php echo $row['email']; ?>" style="border: none; text-decoration: none;"><?php echo substr($row['email'], 0 ,31); ?></abbr></td> <!--<td><.? php echo substr($row['deskripsi'], 0, 20); ?.>...</td> -->
+          <td class="td-sm sm-font"><?php echo $row['nim']; ?></td>
+          <td class="td-sm sm-font"><?php echo $row['angkatan']; ?></td>
+          <td class="td-sm sm-font"><?php echo $row['kelas']; ?></td>
+          <td class="td-sm sm-font"><?php echo $row['verified']; ?></td>
+          <td class="td-sm sm-font">
             <a href="admin-user-edit?id=<?php echo $row['id']; ?>" style="text-decoration:none"> <button name="edit-pass-btn" type="submit" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; border-radius: 5px; width:fit-content" >Edit</button></a>
             <a href="admin-user-hapus-proses?id=<?php echo $row['id']; ?>" style="text-decoration:none" onclick="return confirm('Anda yakin akan menghapus data ini?')"><button name="edit-pass-btn" type="submit" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; border-radius: 5px; width:fit-content">Hapus</button></a>
           </td>
