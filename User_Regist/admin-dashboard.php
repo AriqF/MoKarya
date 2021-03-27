@@ -44,6 +44,9 @@
                              Server Time: <span id="time"></span>
                         </li>
                         <li>
+                            <button class="btn" onclick="runAlertify()">ALertify</button>
+                        </li>
+                        <li>
                             <button class="btn" onclick="runAlert()">Click Me</button> <!--delete later, try sweet alert-->
                         </li>
                     </ul>
@@ -63,6 +66,7 @@
     </div> 
 <!--import sweet alert-->
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
 <script>
 new Morris.Bar({
   element: 'chart',
@@ -104,7 +108,7 @@ function runAlert(){
 ).then(function(){
     window.location.href = "admin-gallery-data.php";
 })
-}
+};
 </script>
 </body>
 </html>
