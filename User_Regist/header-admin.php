@@ -56,6 +56,11 @@ if (!isset($_SESSION['id'])) {
         <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
 
+        <!--sweet alert-->
+        <script src="sweetalert2.all.min.js"></script>
+        <!-- Optional: include a polyfill for ES6 Promises for IE11 -->
+        <script src="//cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
+
         <!--font awesome-->
         <script src="https://kit.fontawesome.com/babb4f3fd7.js" crossorigin="anonymous"></script>
     </head>
