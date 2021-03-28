@@ -107,6 +107,10 @@ tr td{
     width: 60%;
     max-width: 100%;
 }
+#btn-search{
+    background-color: #D78C00;
+    border: 1px solid red;
+}
 .fadeInRight{
     animation: fadeInRight 3s ease;
 }
