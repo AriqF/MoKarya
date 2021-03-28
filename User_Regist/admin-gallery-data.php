@@ -19,7 +19,7 @@
                         <table class="table table-striped table-image">
                             <thead >
                                 <tr>
-                                    <th scope="col">ID</th>
+                                    <th scope="col">Nomor</th>
                                     <th scope="col">Judul</th>
                                     <th scope="col">Deskripsi</th>
                                     <th scope="col">Anggota</th>
