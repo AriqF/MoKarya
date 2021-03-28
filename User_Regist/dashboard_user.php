@@ -20,7 +20,70 @@
                 </div>
               </div>
 
+
+
+
+
+
+
+
+              <!-- TAMPIL DATA KARYA -->
+
               <div class="row">
+
+                <?php
+                $query = "SELECT * FROM data_karya";
+                $query_run = mysqli_query($conn, $query);
+
+                $check_data_karya = mysqli_num_rows($query_run) > 0;
+
+                if($check_data_karya)
+                {
+                  while ($row_karya = mysqli_fetch_array($query_run)) {
+                    ?>
+
+                <div class="col-xl-3 col-lg-4 col-md-6 mb-4 anim">
+                  <div class="bg-white rounded shadow-sm">
+                    <img src="gambar/<?php echo $row_karya['foto_karya']; ?>" class="img-fluid card-img-top" alt="Image Karya">
+                    <div class="p-4">
+                      <h5><a class="text-dark"><?php echo $row_karya['judul']; ?></a></h5>
+                      <p class="small text-muted mb-0"> <!--Desc goes here -->
+                        <?php echo $row_karya['deskripsi'] ?>
+                      </p>
+                      <hr class="separator">
+                      <p class="small text-muted mb-0">
+                        <i class="fas fa-user-friends"></i> <?php echo $row_karya['anggota'] ?>
+                      </p>
+                      <hr class="separator">
+                      <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+                        <button class="btn btn-primary">Read More</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                    <?php
+                    //echo $row_karya['judul'];
+                  }
+                }
+                else
+                {
+                  echo "No Record Found";
+                }
+
+
+                ?>
+
+                
+
+
+
+                <!-- TAMPIL DATA KARYA -->
+
+
+
+
+
 
                 <div class="col-xl-3 col-lg-4 col-md-6 mb-4 anim">
                   <div class="bg-white rounded shadow-sm">
