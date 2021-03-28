@@ -39,7 +39,7 @@
               <div class="row">
 
                 <?php
-                $query = "SELECT * FROM data_karya";
+                $query = "SELECT * FROM data_karya LIMIT $per_laman OFFSET $awal";
                 $query_run = mysqli_query($conn, $query);
 
                 $check_data_karya = mysqli_num_rows($query_run) > 0;
