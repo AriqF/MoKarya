@@ -1,6 +1,7 @@
 <?php
     $currentPage = 'profile';
     include 'header-admin.php';
+    $email = $_SESSION['email'];
 ?>
 <section>
         <div class="container op" id="box" style=" margin-top: 50px; color:white; padding-top: 30px;">
@@ -30,26 +31,36 @@
                         
                     </div>
 
-                    <!--Image Box-->
+                    <!--Form Box II-->
                     <div class="col-md-6">
                         <div class="container" id="pictBox">
                             <h3 style="margin-bottom: 12px; text-align: center;" class="fadeInLeft">Ubah Password</h2>
                             <hr style="border-top: 1px solid white; margin-bottom: 30px; margin-top: 10px">
                             <div class="w-100"></div>
-                            <label class="label control-label">Password</label>
-                            <input type="password" class="form-control" name="password" placeholder="password">
-                            <label class="label control-label">Confirm Password</label>
-                            <input type="password" class="form-control" name="passwordConf" placeholder="confirm password">
+                            <p>Untuk memberbarui password anda dan memastikan bahwa itu anda, silahkan klik tombol dan menuju ke halaman penggantian password</p>
                             <div class="w-100"></div>
-                            <button name="update-pass-btn" type="submit" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; width: 30%; border-radius: 5px" >
-                                Perbarui
+                            <button name="forgot-password" onclick="runAlert()" class="btn btn-success" style="margin-top: 10px; width: 30%; border-radius: 5px" >
+                                Kirim
                             </button>
                         </div>
                     </div>
                 </div>            
             </div>
         </div>
-
+    <!--import sweet alert-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <script>
+        function runAlert(){
+        Swal.fire(
+        'Link Telah Terkirim!',
+        'Silahkan Cek Email Anda',
+        'success'
+        ).then(function(){
+            window.location.href = "admin-profile.php";
+        })
+        };
+    </script>
     </body>
 </html>
 
