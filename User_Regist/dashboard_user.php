@@ -122,23 +122,23 @@
             <?php if($laman_sekarang > 1) {?>
             <li>  
               <a href="dashboard_user?laman=<?php echo $laman_sekarang - 1 ?>">
-                <button class="btn btn-warning" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; border-radius: 5px; width:fit-content; color: white;margin-top:18px;">Previous Page</button> &nbsp;&nbsp;
+                <button class="btn btn-warning btn-lg" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; border-radius: 5px; width:fit-content; color: white;margin-top:18px; margin-right:15px;">Previous Page</button>
               </a>  
             </li> 
           <?php } else {?>
             <li class="nav-link disabled" aria-disabled="true" tabindex="-1">
-                <button class="btn btn-warning" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; border-radius: 5px; width:fit-content; color: white;">Previous Page</button> 
+                <button class="btn btn-warning btn-lg disabled" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; border-radius: 5px; width:fit-content; color: white;">Previous Page</button> 
             </li> 
           <?php } ?>
           <?php if($laman_sekarang < $total_laman) {?>
             <li>
               <a href="dashboard_user?laman=<?php echo $laman_sekarang + 1 ?>">
-                <button class="btn btn-info" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; border-radius: 5px; width:fit-content; margin-top:18px;" >Next Page</button>
+                <button class="btn btn-info btn-lg" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; border-radius: 5px; width:fit-content; margin-top:18px;" >Next Page</button>
               </a>  
             </li> 
             <?php } else {?>
             <li class="nav-link disabled" aria-disabled="true" tabindex="-1">
-                <button class="btn btn-info" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; border-radius: 5px; width:fit-content" >Next Page</button>  
+                <button class="btn btn-info btn-lg disabled" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; border-radius: 5px; width:fit-content" >Next Page</button>  
             </li>
           <?php } ?>
           </ul> 
