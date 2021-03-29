@@ -12,10 +12,10 @@
     $queryKar = mysqli_query($conn, "SELECT id FROM data_karya");
     $totalKarya = mysqli_num_rows($queryKar);
 
-    $queryUV = mysqli_query($conn, "SELECT nim FROM users WHERE verified = 1");
+    $queryUV = mysqli_query($conn, "SELECT nim FROM users WHERE verified = 1  ");
     $totalVerUs = mysqli_num_rows($queryUV);
 
-    $queryUNV = mysqli_query($conn, "SELECT nim FROM users WHERE verified <> 1");
+    $queryUNV = mysqli_query($conn, "SELECT nim FROM users WHERE verified <> 1 AND usertype = 'user'");
     $totalNVerUs = mysqli_num_rows($queryUNV);
 
 ?>
@@ -43,12 +43,6 @@
                             <i class="fas fa-clock"></i>
                              Server Time: <span id="time"></span>
                         </li>
-                        <li>
-                            <button class="btn" onclick="runAlertify()">ALertify</button>
-                        </li>
-                        <li>
-                            <button class="btn" onclick="runAlert()">Click Me</button> <!--delete later, try sweet alert-->
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -64,9 +58,6 @@
         </div>
     </div>
     </div> 
-<!--import sweet alert-->
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
 <script>
 new Morris.Bar({
   element: 'chart',
@@ -100,15 +91,6 @@ function updateTime(){
 $(function(){
   setInterval(updateTime, 1000);
 });
-function runAlert(){
-    Swal.fire(
-  'You Clicked The BTN',
-  'redirect to gallery data',
-  'success'
-).then(function(){
-    window.location.href = "admin-gallery-data.php";
-})
-};
 </script>
 </body>
 </html>
