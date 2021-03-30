@@ -54,7 +54,7 @@
         function runAlert(){
         Swal.fire(
         'Anda akan masuk ke page lupa password!',
-        'Silahkan masukkan email anda',
+        'Silahkan klik kirim untuk mendapatkan link reset password.',
         'success'
         ).then(function(){
             window.location.replace("forgotPassword");
