@@ -55,6 +55,7 @@
                             <input name="foto_karya" type="file" class="form-control-file" id="exampleFormControlFile1" style="cursor: pointer;">  
                             <i style="float: left;font-size:16px;color: red;">Abaikan jika tidak merubah gambar karya.</i>                        
                             <div class="w-100"></div>
+                            <br>
                             <button name="submit-btn" type="submit" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; width: 30%; border-radius: 5px" >
                                 Simpan
                             </button>
