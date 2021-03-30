@@ -53,11 +53,11 @@
     <script>
         function runAlert(){
         Swal.fire(
-        'Link Telah Terkirim!',
-        'Silahkan Cek Email Anda',
+        'Anda akan masuk ke page lupa password!',
+        'Silahkan masukkan email anda',
         'success'
         ).then(function(){
-            window.location.href = "admin-profile.php";
+            window.location.replace("forgotPassword");
         })
         };
     </script>

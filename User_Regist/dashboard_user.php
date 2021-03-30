@@ -55,7 +55,7 @@
                     <div class="p-4">
                       <h5><a class="text-dark"><?php echo $row_karya['judul']; ?></a></h5>
                       <p class="small text-muted mb-0"> <!--Desc goes here -->
-                        <?php echo $row_karya['deskripsi'] ?>
+                        <!-- <?php echo $row_karya['deskripsi'] ?> -->
                       </p>
                       <hr class="separator">
                       <p class="small text-muted mb-0">
