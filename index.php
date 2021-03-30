@@ -1,3 +1,27 @@
+<?php
+  include 'User_Regist/config/db.php';
+
+  $query = "SELECT * FROM data_karya ";
+  $query_run = mysqli_query($conn, $query);
+
+  $check_data_karya = mysqli_num_rows($query_run) > 0;
+  $i = 0;
+  if($check_data_karya)
+  {
+    while ($row_karya = mysqli_fetch_array($query_run)) {
+
+      $judulKarya[$i] = $row_karya['judul'];    
+        
+      $foto_karya[$i] = $row_karya['foto_karya'];
+      $i++;
+    }
+  }
+  else
+  {
+    echo "No Record Found";
+  }
+  //simpan data hasil query dalam array lalu echo 'title' di div dan echo 'gambar' di javascript
+?>
 <DOCTYPE html>
 <html lang="en">
     <head>
@@ -22,10 +46,6 @@
 
         <!--My css-->
         <link rel="stylesheet" type="text/css" href="src/css/indexStyle.css"/>
-
-        <!--Swiper.js-->
-        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
-        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
          
         <!--Google Fonts-->
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -112,15 +132,15 @@
         <h2 class="text-center font-weight-semibold">Showcase Gallery</h3>
         <div class="swiper-container">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">Title 1</div> <!--nth-child(start from 4)--> <!--sliderPerView+1-->
-            <div class="swiper-slide">Title 2</div>
-            <div class="swiper-slide">Title 3</div> 
-            <div class="swiper-slide">Title 4</div>
-            <div class="swiper-slide">Title 5</div>
-            <div class="swiper-slide">Title 6</div>
-            <div class="swiper-slide">Title 7</div>
-            <div class="swiper-slide">Title 8</div>
-            <div class="swiper-slide">Title 9</div>
+            <div class="swiper-slide" id="img<?php echo 1?>"><?php echo $judulKarya[0]; ?></div> <!--nth-child(start from 4)--> <!--sliderPerView+1-->
+            <div class="swiper-slide" id="img<?php echo 2?>"><?php echo $judulKarya[1]; ?></div>
+            <div class="swiper-slide" id="img<?php echo 3?>"><?php echo $judulKarya[2]; ?></div> 
+            <div class="swiper-slide" id="img<?php echo 4?>"><?php echo $judulKarya[3]; ?></div>
+            <div class="swiper-slide" id="img<?php echo 5?>"><?php echo $judulKarya[4]; ?></div>
+            <div class="swiper-slide" id="img<?php echo 6?>"><?php echo $judulKarya[5]; ?></div>
+            <div class="swiper-slide" id="img<?php echo 7?>"><?php echo $judulKarya[6]; ?></div>
+            <div class="swiper-slide" id="img<?php echo 8?>"><?php echo $judulKarya[7]; ?></div>
+            <div class="swiper-slide" id="img<?php echo 9?>"><?php echo $judulKarya[8]; ?></div>
           </div>
           <!-- Add Pagination -->
           <div class="swiper-pagination"></div>
@@ -164,21 +184,29 @@
       <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
       <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
       <script>
-         var swiper = new Swiper('.swiper-container', {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      slidesPerGroup: 3,
-      loop: true,
-      loopFillGroupWithBlank: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
+        var swiper = new Swiper('.swiper-container', {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          loop: true,
+          loopFillGroupWithBlank: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+        document.getElementById('img1').style.backgroundImage = "url(User_Regist/gambar/<?php echo $foto_karya[0]?>)";
+        document.getElementById('img2').style.backgroundImage = "url(User_Regist/gambar/<?php echo $foto_karya[1]?>)";
+        document.getElementById('img3').style.backgroundImage = "url(User_Regist/gambar/<?php echo $foto_karya[2]?>)";
+        document.getElementById('img4').style.backgroundImage = "url(User_Regist/gambar/<?php echo $foto_karya[3]?>)";
+        document.getElementById('img5').style.backgroundImage = "url(User_Regist/gambar/<?php echo $foto_karya[4]?>)";
+        document.getElementById('img6').style.backgroundImage = "url(User_Regist/gambar/<?php echo $foto_karya[5]?>)";
+        document.getElementById('img7').style.backgroundImage = "url(User_Regist/gambar/<?php echo $foto_karya[6]?>)";
+        document.getElementById('img8').style.backgroundImage = "url(User_Regist/gambar/<?php echo $foto_karya[7]?>)";
+        document.getElementById('img9').style.backgroundImage = "url(User_Regist/gambar/<?php echo $foto_karya[8]?>)";
       </script>
     </body>
     
