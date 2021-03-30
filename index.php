@@ -185,11 +185,22 @@
       <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
       <script>
         var swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+              rotate: 50,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: true,
+            },
           slidesPerView: 3,
           spaceBetween: 30,
-          slidesPerGroup: 3,
-          loop: true,
-          loopFillGroupWithBlank: true,
+          slidesPerGroup: 1,
+          loop: false, // to fix the white bug
+          loopFillGroupWithBlank: false, // to fix the white bug
           pagination: {
             el: '.swiper-pagination',
             clickable: true,
