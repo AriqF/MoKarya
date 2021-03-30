@@ -39,7 +39,7 @@
                         <form method="POST" action="admin-unggah-edit-proses" enctype="multipart/form-data">
                             <input name="id" value="<?php echo $data['id']; ?>"  hidden />
                             <label class="label control-label">Judul Karya</label>
-                            <input type="text" class="form-control" name="judul" placeholder="judul karya" value="<?php echo $data['judul']; ?>">
+                            <input type="text" class="form-control" name="judul" placeholder="judul karya" value="<?php echo $data['judul']; ?>" maxlength="20">
                             
 
                             <label class="label control-label">Deskripsi</label>
@@ -47,7 +47,7 @@
                             value="<?php echo $data['deskripsi']; ?>">
 
                             <label class="label control-label">Anggota</label>
-                            <input type="text" class="form-control" name="anggota" placeholder="pisahkan dengan koma jika anggota > 1" value="<?php echo $data['anggota']; ?>" >
+                            <input type="text" class="form-control" name="anggota" placeholder="pisahkan dengan koma jika anggota > 1" value="<?php echo $data['anggota']; ?>" minlength="10" maxlength="32">
 
                             <label for="imageUpload">Unggah Foto Karya</label>
                             <br>
@@ -67,7 +67,17 @@
             </div>
         </div>
 
-
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            Swal.fire(
+            'Ketentuan Mengedit Karya',
+            '<ul> <li>Judul terdiri dari maksimal 20 karakter </li> <li>Anggota terdiri dari 10 hingga 32 karakter </li> <li>Foto yang diunggah memiliki ketentuan dengan ukuran 1920x1080 px</li></ul>',
+            'question'
+            )
+        });
+    </script>
 
 
     </body>
