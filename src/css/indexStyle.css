@@ -123,17 +123,8 @@ h2{
     background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+    color: #EDE8DF; 
 }
-.swiper-slide:nth-child(4){
-    background-image: url(../img/1.jpg);
-}
-.swiper-slide:nth-child(5){
-    background-image: url(../img/2.jpg);
-}
-.swiper-slide:nth-child(6){
-    background-image: url(../img/3.jpg);
-}
-
 a{
     text-decoration: none;
     color: white;
