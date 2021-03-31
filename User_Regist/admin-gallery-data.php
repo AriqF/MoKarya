@@ -11,22 +11,23 @@
             <br>
             </div>
             <div class="w-100"></div>
-            <div class="d-flex bd-highlight mb-3">
-                <div class="mr-auto p-2 bd-highlight">
-                    <a href="admin-unggah">
-                        <button name="edit-pass-btn" type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style=" border-radius: 5px; width:fit-content" >
-                        <i class="fas fa-plus"></i> Tambah Karya
-                        </button>
-                    </a>
+            <form action="" method="POST">
+                <div class="d-flex bd-highlight mb-3">
+                    <div class="mr-auto p-2 bd-highlight">
+                        <a href="admin-unggah">
+                            <button name="edit-pass-btn" type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style=" border-radius: 5px; width:fit-content" >
+                            <i class="fas fa-plus"></i> Tambah Karya
+                            </button>
+                        </a>
+                    </div>
+                    <div class="p-2 bd-highlight">            
+                        <input name="cari" autofocus autocomplete="off" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> 
+                    </div>
+                    <div class="p-2 bd-highlight">
+                        <button name="btn-cari"class="btn btn-outline-info my-2 my-sm-0" type="submit" style="width: fit-content;"><i class="fas fa-search"></i></button>    
+                    </div>
                 </div>
-                <div class="p-2 bd-highlight">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> 
-                </div>
-                <div class="p-2 bd-highlight">
-                    <button class="btn btn-outline-info my-2 my-sm-0" type="submit" style="width: fit-content;"><i class="fas fa-search"></i></button>    
-                </div>
-            </div>
-            
+            </form>
             <div class="table-responsive">
                 <table class="table table-striped table-image">
                     <thead >
@@ -42,9 +43,13 @@
                     </thead>
                     <tbody>
                         <?php
+
                             // jalankan query untuk menampilkan semua data diurutkan berdasarkan nim
                             $query = "SELECT * FROM data_karya ORDER BY id ASC";
                             $result = mysqli_query($conn, $query);
+                            if (isset($_POST['cari'])) {
+                                $result = mysqli_query($conn,"SELECT * FROM data_karya WHERE judul LIKE '%".$_POST['cari']."%' OR anggota LIKE '%".$_POST['cari']."%'" );
+                            }
                             //mengecek apakah ada error ketika menjalankan query
                             if(!$result){
                                 die ("Query Error: ".mysqli_errno($conn).
@@ -53,6 +58,7 @@
                             //perulangan untuk element tabel dari data mahasiswa
                             $ID = 1; //variabel untuk membuat nomor urut
                             // hasil query akan disimpan dalam variabel $data dalam bentuk array kemudian dicetak dengan perulangan while
+                          
                             while($row = mysqli_fetch_assoc($result))
                             {
                             ?>
