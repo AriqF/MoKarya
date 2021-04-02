@@ -2,6 +2,24 @@
     $currentPage = 'profile';
     include 'header-admin.php';
     $email = $_SESSION['email'];
+    if (isset($_POST['forgot-pass'])) {
+    $mail = $_POST['mail'];
+
+    if (!filter_var($email,FILTER_VALIDATE_EMAIL)) {
+        $errors['mail'] = "<font color='red'; > Email Address Is Invalid </font>";
+    }
+    if (empty($email)) {
+        $errors['mail'] = "<font color='red'; > Email Required </font>";
+    }
+    if (count($errors) === 0) {
+        $sql = "SELECT * FROM users WHERE email='$email' LIMIT 1";
+        $result = mysqli_query($conn, $sql);
+        $user = mysqli_fetch_assoc($result);
+        $token = $user['token'];
+        SendPasswordResetLink($email, $token);
+    }
+
+}
 ?>
 <section>
         <div class="container op" id="box" style=" margin-top: 50px; color:white; padding-top: 30px;">
@@ -39,9 +57,11 @@
                             <div class="w-100"></div>
                             <p>Untuk memberbarui password anda dan memastikan bahwa itu anda, silahkan klik tombol dan menuju ke halaman penggantian password</p>
                             <div class="w-100"></div>
-                            <button name="forgot-password" onclick="runAlert()" class="btn btn-success" style="margin-top: 10px; width: 30%; border-radius: 5px" >
+                            <form action="" method="POST">
+                            <button name="forgot-pass" onclick="runAlert()" class="btn btn-success" style="margin-top: 10px; width: 30%; border-radius: 5px" ><input type="text" class="form-control" name="mail"  value="<?php echo $_SESSION['email']; ?> " hidden>
                                 Kirim
                             </button>
+                            </form>
                         </div>
                     </div>
                 </div>            
@@ -53,11 +73,11 @@
     <script>
         function runAlert(){
         Swal.fire(
-        'Anda akan masuk ke page lupa password!',
-        'Silahkan klik kirim untuk mendapatkan link reset password.',
+        'Silahkan cek email anda!',
+        'Kami telah mengirim link untuk mereset password anda.',
         'success'
         ).then(function(){
-            window.location.replace("forgotPassword");
+            window.location.replace("admin-profile");
         })
         };
     </script>
