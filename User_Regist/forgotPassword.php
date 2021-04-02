@@ -46,7 +46,7 @@
                             <div class="w-100"></div>
                             <form>
                                 <label class="label control-label">Email</label>
-                                <input type="email" class="form-control" name="email" placeholder="email" value="<?php echo $_SESSION['email']; ?>">
+                                <input type="email" class="form-control" name="email" placeholder="email">
                                 <div class="col text-center" style="margin-top: 320px;">
                                     <button name="forgot-password" type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="startbtn" style="margin-top: 10px;">
                                         Kirim
