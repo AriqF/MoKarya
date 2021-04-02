@@ -1,4 +1,12 @@
-<?php require_once 'controllers/authController.php'; ?>
+<?php
+ require_once 'controllers/authController.php'; 
+
+   if (isset($_SESSION['id'])) {
+    header('location:history.go(-1)'); // ini logika asli aneh, tapi work anjim :( 
+    exit();
+  }
+
+ ?>
 <!DOCTYPE html>
 <html>
     <head>
