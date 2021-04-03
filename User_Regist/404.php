@@ -16,6 +16,7 @@
 				<div class="card-body">
 					<h1 class="card-title bg-warning"> Error Page</h1>
 					<h2 class="card-title"> 404 Error</h2>
+					<img src="../src/img/giphy.gif" width="300px" height="300px">
 					<p class="card-text"> The page you are searching for is not available, 
 					Please go back to your previous page.</p>
 				</div>
