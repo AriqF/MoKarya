@@ -58,7 +58,7 @@ if (!isset($_SESSION['id'])) {
         <!--Google Fonts-->
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Epilogue&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
         <!--font awesome-->
         <script src="https://kit.fontawesome.com/babb4f3fd7.js" crossorigin="anonymous"></script>
