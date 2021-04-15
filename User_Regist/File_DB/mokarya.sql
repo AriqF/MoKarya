@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 29, 2021 at 08:55 AM
+-- Generation Time: Apr 15, 2021 at 05:59 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.4.15
 
@@ -40,10 +40,15 @@ CREATE TABLE `data_karya` (
 --
 
 INSERT INTO `data_karya` (`id`, `judul`, `deskripsi`, `anggota`, `foto_karya`) VALUES
-(37, 'wallpaper5', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sagittis consequat ipsum, non pulvinar nulla sagittis id.', 'mimi, mumu, momo', '67-1.jpg'),
-(38, 'wallpaper012', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sagittis consequat ipsum, non pulvinar nulla sagittis id.', 'mimi, mumu, momo', '541-bgUnesa.jpg'),
-(39, 'rokett', 'saya ingin mencoba mendebug program ini apakah berjalan lancar atau tidak. Semoga tidak ada bug atau error lagi.', 'Tyos, Brok, Riri', '792-1.jpg'),
-(40, 'rokett', 'saya ingin mencoba mendebug program ini apakah berjalan lancar atau tidak. Semoga tidak ada bug atau error lagi.', 'Tyos, Brok, Riri', '78-2.jpg');
+(49, 'wallpaper1', 'saya ingin mencoba mendebug program ini apakah berjalan lancar atau tidak. Semoga tidak ada bug atau error lagi.', 'Tyos, Brok, Riri', '847-1.jpg'),
+(50, 'wallpaper2', 'saya ingin mencoba mendebug program ini apakah berjalan lancar atau tidak. Semoga tidak ada bug atau error lagi.', 'Tyos, Brok, Riri', '170-2.jpg'),
+(51, 'wallpaper3', 'saya ingin mencoba mendebug program ini apakah berjalan lancar atau tidak. Semoga tidak ada bug atau error lagi.', 'Tyo, Bram, Ruru', '595-3.jpg'),
+(52, 'wallpaper4', 'saya ingin mencoba mendebug program ini apakah berjalan lancar atau tidak. Semoga tidak ada bug atau error lagi.', 'Tyos, Brok, Riri', '720-1.jpg'),
+(53, 'wallpaper5', 'saya ingin mencoba mendebug program ini apakah berjalan lancar atau tidak. Semoga tidak ada bug atau error lagi.', 'Tyos, Brok, Riri', '660-2.jpg'),
+(54, 'wallpaper6', 'saya ingin mencoba mendebug program ini apakah berjalan lancar atau tidak. Semoga tidak ada bug atau error lagi.', 'Tyo, Bram, Ruru', '43-2.jpg'),
+(55, 'wallpaper7', 'saya ingin mencoba mendebug program ini apakah berjalan lancar atau tidak. Semoga tidak ada bug atau error lagi.', 'Tyos, Brok, Riri', '672-1.jpg'),
+(56, 'wallpaper8', 'saya ingin mencoba mendebug program ini apakah berjalan lancar atau tidak. Semoga tidak ada bug atau error lagi.', 'Tyos, Brok, Riri', '808-3.jpg'),
+(57, 'wallpaper9', 'saya ingin mencoba mendebug program ini apakah berjalan lancar atau tidak. Semoga tidak ada bug atau error lagi.', '', '869-1.jpg');
 
 -- --------------------------------------------------------
 
@@ -73,8 +78,29 @@ INSERT INTO `users` (`id`, `namalengkap`, `email`, `nim`, `angkatan`, `kelas`, `
 (27, 'Muhammad Alif H', 'muhammad.19065@mhs.unesa.ac.id', 2147483647, 2020, 'B', 1, '9f443f50ad665034ea43cf967e4bbc5b9eedb75833c995271a39d457d0c29cac3983f4e09f535d1b3ee809fe3d1b51e3dbb8', '$2y$10$KcifS6vWYJWMeM/DART7AOEiqTEfpYbJT4/55mqb.OV2aHAo1nP0y', 'user'),
 (31, 'superuser', 'ariqfachry2611@gmail.com', 666, 2000, 's', 1, '06249e573804e80c841d1b595dd2da5bb2fb158eefe0e63fdf7e4854309421fdfb455af79e093d87e3a5772218504fb4b5a2', '$2y$10$KjGuhBp4yiq4Rm2wUIMeduBy7obLQyU2ITDUgZmpEYJJxo/PryAcG', 'admin'),
 (32, 'Ariq Fachry Ramadhan', 'ariq.19047@mhs.unesa.ac.id', 2147483647, 2019, 'b', 0, '6ac1def919d1f75227dd15913bd69ec6462da6609b6b3fe5912d44c953debb7d8412165ab6573a72edb197a2b9651acede1f', '$2y$10$stiHh9l7sU10cJPShYi/NeHUqAGF8qbtHqjNkvOQR8CREpW5fv6/u', 'user'),
-(33, 'Abdussalam Faqih Umaro', 'kimimaroooo@gmail.com', 2147483647, 2019, 'a', 0, '9aed0825445ed071c0ba197cf3e7ef5070aeaa980cc45f559b216a57e0f7dbacb2df634244dcc4ceb7282f3652075d0a1f7a', '$2y$10$.gD14CPiA7hTclRulO/yyuyF4KX0PKdnUnuZwIsWdc2e2zYD8FGTK', 'user'),
+(33, 'Raihan Faqih Umaro', 'kimimaroooo@gmail.com', 2147483123, 2019, 'a', 0, '9aed0825445ed071c0ba197cf3e7ef5070aeaa980cc45f559b216a57e0f7dbacb2df634244dcc4ceb7282f3652075d0a1f7a', '$2y$10$.gD14CPiA7hTclRulO/yyuyF4KX0PKdnUnuZwIsWdc2e2zYD8FGTK', 'user'),
 (34, 'Ariq Fachry Ramadhan', 'rekken26@gmail.com', 19051397088, 2020, 'b', 1, 'c7395a7dc79fa480078028701ee70b7f273aa9bc02daec515948c52408429261e61e56a0473321919a15360e49da795c99b9', '$2y$10$0wDgwjNEuSplHmDaMUN6DeTtZvmxbe2xawjGMteznwjah6y5g1mE6', 'user');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_rating`
+--
+
+CREATE TABLE `user_rating` (
+  `rating` tinyint(4) NOT NULL,
+  `komentar` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user_rating`
+--
+
+INSERT INTO `user_rating` (`rating`, `komentar`) VALUES
+(4, 'bagus!'),
+(5, ' sempurna!'),
+(2, ' buruk!'),
+(4, ' asd');
 
 --
 -- Indexes for dumped tables
@@ -101,7 +127,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `data_karya`
 --
 ALTER TABLE `data_karya`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 
 --
 -- AUTO_INCREMENT for table `users`
