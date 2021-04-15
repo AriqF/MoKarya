@@ -47,7 +47,7 @@
                             value="<?php echo $data['deskripsi']; ?>">
 
                             <label class="label control-label">Anggota</label>
-                            <input type="text" class="form-control" name="anggota" placeholder="pisahkan dengan koma jika anggota > 1" value="<?php echo $data['anggota']; ?>" minlength="10" maxlength="32">
+                            <input type="text" class="form-control" name="anggota" placeholder="pisahkan dengan koma jika anggota > 1" value="<?php echo $data['anggota']; ?>" minlength="10" maxlength="28">
 
                             <label for="imageUpload">Unggah Foto Karya</label>
                             <br>
@@ -73,7 +73,7 @@
         $(document).ready(function() {
             Swal.fire(
             'Ketentuan Mengedit Karya',
-            '<ul> <li>Judul terdiri dari maksimal 20 karakter </li> <li>Anggota terdiri dari 10 hingga 32 karakter </li> <li>Foto yang diunggah memiliki ketentuan dengan ukuran 1920x1080 px</li></ul>',
+            '<ul> <li>Judul terdiri dari maksimal 20 karakter </li> <li>Anggota terdiri dari 10 hingga 28 karakter </li> <li>Foto yang diunggah memiliki ketentuan dengan ukuran 1920x1080 px</li></ul>',
             'question'
             )
         });

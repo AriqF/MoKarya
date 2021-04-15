@@ -18,7 +18,7 @@
                             <label class="label control-label">Deskripsi</label>
                             <input class="form-control" name="deskripsi" placeholder="tulis deskripsi karya secara singkat" style="margin-bottom: 10px;"></input>
                             <label class="label control-label">Anggota</label>
-                            <input type="text" class="form-control" name="anggota" placeholder="pisahkan dengan koma jika anggota > 1" minlength="10" maxlength="32">
+                            <input type="text" class="form-control" name="anggota" placeholder="pisahkan dengan koma jika anggota > 1" minlength="10" maxlength="28">
                             <label for="imageUpload">Unggah Foto Karya</label>
                             <input name="foto_karya" type="file"  class="form-control-file" id="exampleFormControlFile1" style="cursor: pointer;">                          
                             <div class="w-100"></div>
@@ -39,7 +39,7 @@
         $(document).ready(function() {
             Swal.fire(
             'Ketentuan Mengupload Karya',
-            '<ul> <li>Judul terdiri dari maksimal 20 karakter </li> <li>Anggota terdiri dari 10 hingga 32 karakter </li> <li>Foto yang diunggah memiliki ketentuan dengan ukuran 1920x1080 px</li></ul>',
+            '<ul> <li>Judul terdiri dari maksimal 20 karakter </li> <li>Anggota terdiri dari 10 hingga 28 karakter </li> <li>Foto yang diunggah memiliki ketentuan dengan ukuran 1920x1080 px</li></ul>',
             'question'
             )
         });
