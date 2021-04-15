@@ -62,7 +62,7 @@
                         <i class="fas fa-user-friends"></i> <?php echo $row_karya['anggota'] ?>
                       </p>
                       <hr class="separator">
-                      <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+                      <div class="d-flex align-items-center justify-content-between rounded-pill bg-white px-3 py-2 mt-4">
                         <button class="btn btn-primary" data-toggle="modal" data-target="#img<?php echo $row_karya['id']; ?>">Read More</button>
                       </div>
                     </div>
