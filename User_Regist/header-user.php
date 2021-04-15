@@ -44,6 +44,7 @@ if (!isset($_SESSION['id'])) {
 
         <!--My css-->
         <link href="../src/css/dashboard_user.css" type="text/css" rel="stylesheet"> 
+        <link href="../src/css/user_ratingStyle.css" type="text/css" rel="stylesheet"> 
 
         <!--Swiper.js-->
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
@@ -79,7 +80,10 @@ if (!isset($_SESSION['id'])) {
                 </li>
                 <li class="nav-item <?php if($currPage =='profile'){echo 'active';}?>">
                     <a class="nav-link" href="profile-user"><i class="fas fa-id-card"></i> Profile</a>
-                </li>               
+                </li>        
+                <li class="nav-item <?php if($currPage =='user-rating'){echo 'active';}?>">
+                    <a class="nav-link" href="user-rating"><i class="fas fa-star-half-alt"></i> Rate Us</a>
+                </li>         
                 <li class="nav-item">
                     <a class="nav-link" href="index1?logout=1"><i class="fas fa-sign-out-alt"></i> Sign Out</a>
                 </li>
