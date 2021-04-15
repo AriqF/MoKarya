@@ -39,7 +39,7 @@
                         <form method="POST" action="admin-unggah-edit-proses" enctype="multipart/form-data">
                             <input name="id" value="<?php echo $data['id']; ?>"  hidden />
                             <label class="label control-label">Judul Karya</label>
-                            <input type="text" class="form-control" name="judul" placeholder="judul karya" value="<?php echo $data['judul']; ?>" maxlength="20">
+                            <input type="text" class="form-control" name="judul" placeholder="judul karya" value="<?php echo $data['judul']; ?>" maxlength="19">
                             
 
                             <label class="label control-label">Deskripsi</label>
@@ -73,7 +73,7 @@
         $(document).ready(function() {
             Swal.fire(
             'Ketentuan Mengedit Karya',
-            '<ul> <li>Judul terdiri dari maksimal 20 karakter </li> <li>Anggota terdiri dari 10 hingga 28 karakter </li> <li>Foto yang diunggah memiliki ketentuan dengan ukuran 1920x1080 px</li></ul>',
+            '<ul> <li>Judul terdiri dari maksimal 19 karakter </li> <li>Anggota terdiri dari 10 hingga 28 karakter </li> <li>Foto yang diunggah memiliki ketentuan dengan ukuran 1920x1080 px</li></ul>',
             'question'
             )
         });
