@@ -35,7 +35,7 @@
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
-    <<script>
+    <script>
         $(document).ready(function() {
             Swal.fire(
             'Ketentuan Mengupload Karya',
