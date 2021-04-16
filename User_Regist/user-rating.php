@@ -10,7 +10,7 @@
             <div class="col-md-12">
                 <h1 style="text-align: center;" class="fadeInDown">Rate Us! </h1>
                 <hr style="border-top: 1px solid white; margin-bottom: 20px; margin-top: 10px"> 
-                <h5 style="margin-bottom: 0px;">Bagaimana dengan pengalaman anda di sistem informasi ini?</h5>
+                <h5 style="margin-bottom: 0px;">Bagaimana dengan pengalaman anda dalam menggunakan sistem informasi ini?</h5>
                 <form class="rating" method="POST" action="user-rating-proses" id="rateForm" enctype="multipart/form-data">
                     <label>
                         <input type="radio" name="rating" value="1" />
@@ -42,13 +42,18 @@
                         <span class="icon">★</span>
                         <span class="icon">★</span>
                     </label>            
-            </div>
+        </div>
         </div>
         <div class="row justify-content-md-center">
             <div class="col-md-12">
                 <input type="text" class="form-control" name="namalengkap" value="<?php echo $_SESSION['namalengkap']; ?> " hidden>
                 <label class="label control-label"><h5>Komentar</h5></label>
-                <textarea type="text" class="form-control" id="exampleFormControlTextarea1" rows="3" name="komentar" placeholder="berikan komentar anda" style="width:80%"> </textarea>
+                <textarea type="text" class="form-control" id="exampleFormControlTextarea1" rows="4" name="komentar" placeholder="berikan komentar anda" style="width:80%"> </textarea>
+                <div class="custom-control custom-checkbox" style="margin-top: 12px;">
+                    <input type="checkbox" class="custom-control-input" id="defaultChecked2" name="anonymSend" value="true">
+                    <label class="custom-control-label" for="defaultChecked2" id="keeptxt">Kirim sebagai anonim</label>
+                </div>
+                <div class="w-100"></div>
                 <button name="submit-btn" type="submit" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; width: 30%; border-radius: 5px" >
                     Submit
                 </button>
@@ -56,6 +61,7 @@
             </div>
         </div>
     </div>
+    
 
 <script>
     $(':radio').change(function() {

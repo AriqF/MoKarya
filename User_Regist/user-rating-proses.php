@@ -3,7 +3,14 @@
 
     $rating  = $_POST['rating'];
     $komentar = $_POST['komentar'];
-    $namalengkap = $_POST['namalengkap'];
+
+    if ($_POST['anonymSend'] == 'true'){
+        $namalengkap = "anonim";
+    }
+    else{
+        $namalengkap = $_POST['namalengkap'];
+    }
+   
     $query = "INSERT INTO user_rating (rating, komentar, namalengkap) VALUES ('$rating', '$komentar', '$namalengkap')";
     $result = mysqli_query($conn, $query);
     if(!$result){
