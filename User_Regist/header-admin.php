@@ -89,6 +89,9 @@ if (!isset($_SESSION['id'])) {
                     <li class="nav-item <?php if($currentPage =='usersConfig'){echo 'active';}?>">
                         <a class="nav-link" href="admin-usersConfig"><i class="fas fa-users"></i> Users </a>
                     </li>
+                    <li class="nav-item <?php if($currentPage =='admin-list-user-rating'){echo 'active';}?>">
+                        <a class="nav-link" href="admin-list-user-rating"><i class="fas fa-star-half-alt"></i>Reviews</a>
+                    </li>   
                     <li class="nav-item <?php if($currentPage =='profile'){echo 'active';}?>">
                         <a class="nav-link" href="admin-profile"><i class="fas fa-id-card"></i> Profile</a>
                     </li>
