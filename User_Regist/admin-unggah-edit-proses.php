@@ -27,6 +27,7 @@
                     $result = mysqli_query($conn, $query);
                     // periska query apakah ada error
                     if(!$result){
+                      echo "<script>alert('Upload gagal');window.location='admin-gallery-data';</script>";
                         die ("Query gagal dijalankan: ".mysqli_errno($conn).
                             " - ".mysqli_error($conn));
                     } 
@@ -50,6 +51,7 @@
         $result = mysqli_query($conn, $query);
         // periska query apakah ada error
         if(!$result){
+          echo "<script>alert('Upload gagal');window.location='admin-gallery-data';</script>";
             die ("Query gagal dijalankan: ".mysqli_errno($conn).
                 " - ".mysqli_error($conn));
         } else {
