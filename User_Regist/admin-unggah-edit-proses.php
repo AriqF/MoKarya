@@ -1,6 +1,11 @@
 <?php
     require 'config/db.php';
 
+    // agar user tidak bisa akses
+    if($_SESSION['usertype'] == "user"){
+    header("location: 404");
+    }
+
     // membuat variabel untuk menampung data dari form
 
     if (isset($_POST['id']) || isset($_POST['judul']) || isset($_POST['deskripsi']) || isset($_POST['anggota']) || isset($_POST['foto_karya'])) {
@@ -27,6 +32,7 @@
                     $result = mysqli_query($conn, $query);
                     // periska query apakah ada error
                     if(!$result){
+                      echo "<script>alert('Upload gagal');window.location='admin-gallery-data';</script>";
                         die ("Query gagal dijalankan: ".mysqli_errno($conn).
                             " - ".mysqli_error($conn));
                     } 
@@ -50,6 +56,7 @@
         $result = mysqli_query($conn, $query);
         // periska query apakah ada error
         if(!$result){
+          echo "<script>alert('Upload gagal');window.location='admin-gallery-data';</script>";
             die ("Query gagal dijalankan: ".mysqli_errno($conn).
                 " - ".mysqli_error($conn));
         } else {

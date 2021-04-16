@@ -1,6 +1,11 @@
 <?php
     require 'config/db.php';
 
+    // agar user tidak bisa akses
+    if($_SESSION['usertype'] == "user"){
+    header("location: 404");
+    }
+
   // membuat variabel untuk menampung data dari form
   $judul      = $_POST['judul'];
   $deskripsi  = $_POST['deskripsi'];
@@ -8,7 +13,7 @@
   $foto_karya = $_FILES['foto_karya']['name']; 
 
 
-  if (empty($judul) || empty($deskripsi) || empty($anggota)){
+  if (empty($judul) || empty($deskripsi) || empty($anggota) || empty($foto_karya)){
     echo "<script>alert('Form wajib diisi dengan lengkap!');</script>"; 
   }
   //cek dulu jika ada gambar produk jalankan coding ini
@@ -27,7 +32,8 @@
                     $result = mysqli_query($conn, $query);
                     // periska query apakah ada error
                     if(!$result){
-                        die ("Query gagal dijalankan: ".mysqli_errno($conn).
+                      echo "<script>alert('Upload gagal');window.location='admin-unggah';</script>";
+                      die ("Query gagal dijalankan: ".mysqli_errno($conn).
                             " - ".mysqli_error($conn));
                     } else {
                       //tampil alert dan akan redirect ke halaman index.php
@@ -37,7 +43,7 @@
 
               }
               elseif($width != 1920 || $height != 1080){
-                echo "<script>alert('Gambar harus memiliki dimensi 1920x1080!');window.location='admin-unggah';</script>";
+                echo "<script>alert('Gambar harus memiliki dimensi 1920x1080!');window.location='admin-gallery-data';</script>";
               }
 
               else {     
@@ -49,7 +55,8 @@
                     $result = mysqli_query($conn, $query);
                     // periska query apakah ada error
                     if(!$result){
-                        die ("Query gagal dijalankan: ".mysqli_errno($conn).
+                      echo "<script>alert('Upload gagal');window.location='admin-unggah';</script>";
+                      die ("Query gagal dijalankan: ".mysqli_errno($conn).
                             " - ".mysqli_error($conn));
                     } else {
                       //tampil alert dan akan redirect ke halaman index.php
