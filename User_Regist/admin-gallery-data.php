@@ -11,7 +11,7 @@
             <br>
             </div>
             <div class="w-100"></div>
-            <form action="" method="POST">
+            <form action="admin-unggah" method="POST">
                 <div class="d-flex bd-highlight mb-3">
                     <div class="mr-auto p-2 bd-highlight">
                         <a href="admin-unggah">
