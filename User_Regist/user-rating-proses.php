@@ -3,7 +3,8 @@
 
     $rating  = $_POST['rating'];
     $komentar = $_POST['komentar'];
-    $query = "INSERT INTO user_rating (rating, komentar) VALUES ('$rating', '$komentar')";
+    $namalengkap = $_POST['namalengkap'];
+    $query = "INSERT INTO user_rating (rating, komentar, namalengkap) VALUES ('$rating', '$komentar', '$namalengkap')";
     $result = mysqli_query($conn, $query);
     if(!$result){
         die ("Query gagal dijalankan: ".mysqli_errno($conn).

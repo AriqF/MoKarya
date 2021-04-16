@@ -41,11 +41,12 @@
                         <span class="icon">★</span>
                         <span class="icon">★</span>
                         <span class="icon">★</span>
-                    </label>              
+                    </label>            
             </div>
         </div>
         <div class="row justify-content-md-center">
             <div class="col-md-12">
+                <input type="text" class="form-control" name="namalengkap" value="<?php echo $_SESSION['namalengkap']; ?> " hidden>
                 <label class="label control-label"><h5>Komentar</h5></label>
                 <textarea type="text" class="form-control" id="exampleFormControlTextarea1" rows="3" name="komentar" placeholder="berikan komentar anda" style="width:80%"> </textarea>
                 <button name="submit-btn" type="submit" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; width: 30%; border-radius: 5px" >
