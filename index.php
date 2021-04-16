@@ -115,7 +115,7 @@
                           </button>
                           <div class="w-100"></div>
                           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="startbtn2">
-                            <a href="User_Regist/gallery_guest" class="redirect-btn">Lihat Gallery &#187 <!--To Gallery Page Guest--></a>
+                            <a href="User_Regist/guest-gallery" class="redirect-btn">Lihat Gallery &#187 <!--To Gallery Page Guest--></a>
                           </button>
                         </td>
                       </tr>
