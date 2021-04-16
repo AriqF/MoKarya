@@ -12,11 +12,14 @@
     $queryKar = mysqli_query($conn, "SELECT id FROM data_karya");
     $totalKarya = mysqli_num_rows($queryKar);
 
-    $queryUV = mysqli_query($conn, "SELECT nim FROM users WHERE verified = 1  ");
+    $queryUV = mysqli_query($conn, "SELECT nim FROM users WHERE verified = 1  AND usertype = 'user'");
     $totalVerUs = mysqli_num_rows($queryUV);
 
     $queryUNV = mysqli_query($conn, "SELECT nim FROM users WHERE verified <> 1 AND usertype = 'user'");
     $totalNVerUs = mysqli_num_rows($queryUNV);
+
+    $queryReview = mysqli_query($conn, "SELECT rating FROM user_rating");
+    $totalReview = mysqli_num_rows($queryReview);
 
 ?>
 
@@ -64,7 +67,8 @@ new Morris.Bar({
   data: [
     { entity: 'User', value:  <?php echo $totalUsers; ?>},
     { entity: 'Admin', value:  <?php echo $totalAdmin; ?>},
-    { entity: 'Karya', value:  <?php echo $totalKarya; ?>}
+    { entity: 'Karya', value:  <?php echo $totalKarya; ?>},
+    { entity: 'Review', value:  <?php echo $totalReview; ?>}
   ],
   xkey: 'entity',
   ykeys: ['value'],
