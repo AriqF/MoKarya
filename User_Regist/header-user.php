@@ -19,6 +19,11 @@ if (!isset($_SESSION['id'])) {
     exit();
 }
 
+// agar admin tidak bisa akses
+    if($_SESSION['usertype'] == "admin"){
+    header("location: 404");
+}
+
 ?>
 <!DOCTYPE html>
 <html>

@@ -160,39 +160,43 @@ if (isset($_POST['login-btn'])) {
       $user = $result->fetch_assoc();
     
       if (password_verify($password, $user['password'])) {
+        if($_SESSION['usertype'] == ""){
 
-        if($user['usertype'] == "admin")
-        {
-            //login sucess
-            $_SESSION['id'] = $user['id'];
-            $_SESSION['namalengkap'] = $user['namalengkap'];
-            $_SESSION['email'] = $user['email'];
-            $_SESSION['nim'] = $user['nim']; //namalengkap
-            $_SESSION['angkatan'] = $user['angkatan'];
-            $_SESSION['kelas'] = $user['kelas'];
-            $_SESSION['verified'] = $user['verified'];
-            // flash message
-            $_SESSION['message'] = "You are now logged in";
-            $_SESSION['alert-class'] = "alert-success";
-            header('location: admin-dashboard');
-            exit();
-        }
+            if($user['usertype'] == "admin")
+            {
+                //login sucess
+                $_SESSION['usertype'] = "admin";
+                $_SESSION['id'] = $user['id'];
+                $_SESSION['namalengkap'] = $user['namalengkap'];
+                $_SESSION['email'] = $user['email'];
+                $_SESSION['nim'] = $user['nim']; //namalengkap
+                $_SESSION['angkatan'] = $user['angkatan'];
+                $_SESSION['kelas'] = $user['kelas'];
+                $_SESSION['verified'] = $user['verified'];
+                // flash message
+                $_SESSION['message'] = "You are now logged in";
+                $_SESSION['alert-class'] = "alert-success";
+                header('location: admin-dashboard');
+                exit();
+            }
 
-        else if($user['usertype'] == "user")
-        {
-            //login sucess
-            $_SESSION['id'] = $user['id'];
-            $_SESSION['namalengkap'] = $user['namalengkap'];
-            $_SESSION['email'] = $user['email'];
-            $_SESSION['nim'] = $user['nim']; //namalengkap
-            $_SESSION['angkatan'] = $user['angkatan'];
-            $_SESSION['kelas'] = $user['kelas'];
-            $_SESSION['verified'] = $user['verified'];
-            // flash message
-            $_SESSION['message'] = "You are now logged in";
-            $_SESSION['alert-class'] = "alert-success";
-            header('location: dashboard_user');
-            exit();
+            else if($user['usertype'] == "user")
+            {
+                //login sucess
+                $_SESSION['usertype'] = "user";
+                $_SESSION['id'] = $user['id'];
+                $_SESSION['namalengkap'] = $user['namalengkap'];
+                $_SESSION['email'] = $user['email'];
+                $_SESSION['nim'] = $user['nim']; //namalengkap
+                $_SESSION['angkatan'] = $user['angkatan'];
+                $_SESSION['kelas'] = $user['kelas'];
+                $_SESSION['verified'] = $user['verified'];
+                // flash message
+                $_SESSION['message'] = "You are now logged in";
+                $_SESSION['alert-class'] = "alert-success";
+                header('location: dashboard_user');
+                exit();
+            }
         }
             
     
