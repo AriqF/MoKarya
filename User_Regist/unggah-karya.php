@@ -1,6 +1,9 @@
 <?php
     $currPage = 'unggah';
     include 'header-user.php';
+
+    // $id_users = $_SESSION['id'];
+    // $query = mysqli_query($conn, "SELECT * FROM data_karya WHERE id_pengunggah = '$id_users'")
 ?>
         <div class="container op" id="box" style=" margin-top: 50px; color:white; padding-top: 30px;">
             <div class="row">
@@ -11,15 +14,16 @@
                         <p style="font-size: 14px;">Isi form berikut dengan singkat dan jelas</p>
                         <hr style="border-top: 1px solid white; margin-bottom: 30px; margin-top: 36px">
                         <div class="w-100"></div>
-                        <form>
+                         <form method="POST" action="unggah-karya-proses" enctype="multipart/form-data">
                             <label class="label control-label">Judul Karya</label>
-                            <input type="text" class="form-control" name="title" placeholder="judul karya">
-                            <label class="label control-label">Anggota</label>
-                            <input type="text" class="form-control" name="anggota" placeholder="pisahkan dengan koma jika anggota > 1">
+                            <input type="text" class="form-control" name="judul" placeholder="judul karya" maxlength="19">
                             <label class="label control-label">Deskripsi</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" name="desc" rows="3" placeholder="tulis deskripsi karya secara singkat" style="margin-bottom: 10px;"></textarea>
+                            <input class="form-control" name="deskripsi" placeholder="tulis deskripsi karya secara singkat" style="margin-bottom: 10px;"></input>
+                            <label class="label control-label">Anggota</label>
+                            <input type="text" class="form-control" name="anggota" placeholder="pisahkan dengan koma jika anggota > 1" minlength="10" maxlength="28">
                             <label for="imageUpload">Unggah Foto Karya</label>
-                            <input type="file" class="form-control-file" id="exampleFormControlFile1" style="cursor: pointer;">                          
+                            <input name="foto_karya" type="file"  class="form-control-file" id="exampleFormControlFile1" style="cursor: pointer;">   
+                             <input name="id_pengunggah" type="text" class="form-control" value="<?php echo $_SESSION['id']; ?>" hidden>
                             <div class="w-100"></div>
                             <button name="submit-btn" type="submit" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; width: 30%; border-radius: 5px" >
                                 Unggah
@@ -45,9 +49,8 @@
                                 </div>
                                 <select class="custom-select" id="inputGroupSelect01" style="cursor: pointer;">
                                     <option selected>Pilih...</option>
-                                    <option value="1">Title 01</option>
-                                    <option value="2">Title 02</option>
-                                    <option value="3">Title 03</option>
+                                    <option><?php echo $_SESSION['id']; ?></option>
+
                                 </select>
                                 <div class="w-100"></div>
                                 <button type="submit" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; width: 30%; border-radius: 5px" >
@@ -59,6 +62,16 @@
                 </div>            
             </div>
         </div>
-
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <<script>
+        $(document).ready(function() {
+            Swal.fire(
+            'Ketentuan Mengupload Karya',
+            '<ul> <li>Judul terdiri dari maksimal 19 karakter </li> <li>Anggota terdiri dari 10 hingga 28 karakter </li> <li>Foto yang diunggah memiliki ketentuan dengan ukuran 1920x1080 px</li></ul>',
+            'question'
+            )
+        });
+    </script>
     </body>
 </html>
