@@ -11,14 +11,15 @@
             <br>
             </div>
             <div class="w-100"></div>
+             <a href="admin-unggah" style="margin-top: 9px;">
+                 <button name="edit-pass-btn" type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style=" border-radius: 5px; width:fit-content" >
+                 <i class="fas fa-plus"></i> Tambah Karya
+                 </button>
+             </a>
             <form action="" method="POST">
                 <div class="d-flex bd-highlight mb-3">
                     <div class="mr-auto p-2 bd-highlight">
-                        <a href="admin-unggah">
-                            <button name="edit-pass-btn" type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style=" border-radius: 5px; width:fit-content" >
-                            <i class="fas fa-plus"></i> Tambah Karya
-                            </button>
-                        </a>
+                       
                     </div>
                     <div class="p-2 bd-highlight">            
                         <input name="cari" autofocus autocomplete="off" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> 
