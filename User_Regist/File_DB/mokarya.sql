@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 15, 2021 at 05:59 PM
+-- Generation Time: Apr 18, 2021 at 09:28 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.4.15
 
@@ -24,6 +24,18 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `id_admin` int(11) NOT NULL,
+  `user_admin` varchar(255) NOT NULL,
+  `password_admin` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `data_karya`
 --
 
@@ -32,23 +44,17 @@ CREATE TABLE `data_karya` (
   `judul` varchar(255) NOT NULL,
   `deskripsi` text NOT NULL,
   `anggota` varchar(255) NOT NULL,
-  `foto_karya` varchar(255) NOT NULL
+  `foto_karya` varchar(255) NOT NULL,
+  `id_pengunggah` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `data_karya`
 --
 
-INSERT INTO `data_karya` (`id`, `judul`, `deskripsi`, `anggota`, `foto_karya`) VALUES
-(49, 'wallpaper1', 'saya ingin mencoba mendebug program ini apakah berjalan lancar atau tidak. Semoga tidak ada bug atau error lagi.', 'Tyos, Brok, Riri', '847-1.jpg'),
-(50, 'wallpaper2', 'saya ingin mencoba mendebug program ini apakah berjalan lancar atau tidak. Semoga tidak ada bug atau error lagi.', 'Tyos, Brok, Riri', '170-2.jpg'),
-(51, 'wallpaper3', 'saya ingin mencoba mendebug program ini apakah berjalan lancar atau tidak. Semoga tidak ada bug atau error lagi.', 'Tyo, Bram, Ruru', '595-3.jpg'),
-(52, 'wallpaper4', 'saya ingin mencoba mendebug program ini apakah berjalan lancar atau tidak. Semoga tidak ada bug atau error lagi.', 'Tyos, Brok, Riri', '720-1.jpg'),
-(53, 'wallpaper5', 'saya ingin mencoba mendebug program ini apakah berjalan lancar atau tidak. Semoga tidak ada bug atau error lagi.', 'Tyos, Brok, Riri', '660-2.jpg'),
-(54, 'wallpaper6', 'saya ingin mencoba mendebug program ini apakah berjalan lancar atau tidak. Semoga tidak ada bug atau error lagi.', 'Tyo, Bram, Ruru', '43-2.jpg'),
-(55, 'wallpaper7', 'saya ingin mencoba mendebug program ini apakah berjalan lancar atau tidak. Semoga tidak ada bug atau error lagi.', 'Tyos, Brok, Riri', '672-1.jpg'),
-(56, 'wallpaper8', 'saya ingin mencoba mendebug program ini apakah berjalan lancar atau tidak. Semoga tidak ada bug atau error lagi.', 'Tyos, Brok, Riri', '808-3.jpg'),
-(57, 'wallpaper9', 'saya ingin mencoba mendebug program ini apakah berjalan lancar atau tidak. Semoga tidak ada bug atau error lagi.', '', '869-1.jpg');
+INSERT INTO `data_karya` (`id`, `judul`, `deskripsi`, `anggota`, `foto_karya`, `id_pengunggah`) VALUES
+(59, 'Judul pertama', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 'Rara, riri, ruru', '', 32),
+(60, 'Judul kedua', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 'Lili, lulu, lele', '', 33);
 
 -- --------------------------------------------------------
 
@@ -89,18 +95,20 @@ INSERT INTO `users` (`id`, `namalengkap`, `email`, `nim`, `angkatan`, `kelas`, `
 
 CREATE TABLE `user_rating` (
   `rating` tinyint(4) NOT NULL,
-  `komentar` text NOT NULL
+  `komentar` text NOT NULL,
+  `namalengkap` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `user_rating`
 --
 
-INSERT INTO `user_rating` (`rating`, `komentar`) VALUES
-(4, 'bagus!'),
-(5, ' sempurna!'),
-(2, ' buruk!'),
-(4, ' asd');
+INSERT INTO `user_rating` (`rating`, `komentar`, `namalengkap`) VALUES
+(5, ' baik', 'guest'),
+(5, ' baguss', 'guest'),
+(4, 'hahaha', ''),
+(4, ' hjahaha', 'guest'),
+(5, ' good', 'Han');
 
 --
 -- Indexes for dumped tables
@@ -110,7 +118,8 @@ INSERT INTO `user_rating` (`rating`, `komentar`) VALUES
 -- Indexes for table `data_karya`
 --
 ALTER TABLE `data_karya`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id_pengunggah` (`id_pengunggah`);
 
 --
 -- Indexes for table `users`
@@ -127,13 +136,23 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `data_karya`
 --
 ALTER TABLE `data_karya`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `data_karya`
+--
+ALTER TABLE `data_karya`
+  ADD CONSTRAINT `data_karya_ibfk_1` FOREIGN KEY (`id_pengunggah`) REFERENCES `users` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
