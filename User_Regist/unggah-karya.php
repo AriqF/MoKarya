@@ -4,6 +4,9 @@
 
     // $id_users = $_SESSION['id'];
     // $query = mysqli_query($conn, "SELECT * FROM data_karya WHERE id_pengunggah = '$id_users'")
+
+    $uid = $_SESSION['id'];
+
 ?>
         <div class="container op" id="box" style=" margin-top: 50px; color:white; padding-top: 30px;">
             <div class="row">
@@ -48,8 +51,24 @@
                                     <label class="input-group-text" for="inputGroupSelect01">Options</label>
                                 </div>
                                 <select class="custom-select" id="inputGroupSelect01" style="cursor: pointer;">
-                                    <option selected>Pilih...</option>
-                                    <option><?php echo $_SESSION['id']; ?></option>
+                                    <option selected>Pilih Berdasarkan Judul</option>
+                                    <!-- <option><?php echo $_SESSION['id']; ?></option> -->
+                                    <option>
+                                    <?php
+
+                                        $query = "SELECT d.id, d.id_pengunggah, d.judul FROM data_karya AS d JOIN users AS u ON d.id_pengunggah = $uid GROUP BY d.judul;";
+                                        $result = mysqli_query($conn, $query);
+                                        if(!$result){
+                                        die ("Query Error: ".mysqli_errno($conn).
+                                                    " - ".mysqli_error($conn));
+                                        }
+                                                   
+                                        while($row = mysqli_fetch_assoc($result))
+                                        {
+                                            echo $row['judul'];
+                                        } 
+                                    ?>
+                                    </option>
 
                                 </select>
                                 <div class="w-100"></div>
