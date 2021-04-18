@@ -66,15 +66,19 @@
                                         while($row = mysqli_fetch_assoc($result))
                                         {
                                             echo $row['judul'];
-                                        } 
-                                    ?>
+                                            ?>
                                     </option>
-
                                 </select>
                                 <div class="w-100"></div>
-                                <button type="submit" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; width: 30%; border-radius: 5px" >
+                                <a href="unggah-karya-hapus-proses?id=<?php echo $row['id']; ?>" style="text-decoration:none" onclick="return confirm('Anda yakin akan menghapus data ini?')" ><button name="edit-pass-btn" type="submit" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; border-radius: 5px; width:fit-content">Hapus</button></a>
+                                <!-- <button type="submit" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; width: 30%; border-radius: 5px" >
                                     Hapus
-                                </button>
+                                </button> -->
+                                <?php 
+
+                                } 
+
+                                ?>
                             </div>
                         </div>
                     </div>
