@@ -2,6 +2,7 @@
     $currPage = 'user-rating';
     include 'header-user.php';
 
+    $uid = $_SESSION['id'];
 ?>
 <section>
 
@@ -10,7 +11,24 @@
             <div class="col-md-12">
                 <h1 style="text-align: center;" class="fadeInDown">Rate Us! </h1>
                 <hr style="border-top: 1px solid white; margin-bottom: 20px; margin-top: 10px"> 
-                <h5 style="margin-bottom: 0px;">Bagaimana dengan pengalaman anda dalam menggunakan sistem informasi ini?</h5>
+                <h5 style="margin-bottom: 0px;">Bagaimana dengan pengalaman anda dalam menggunakan sistem informasi ini? </h5>
+                <p>Hai, <?php echo $uid; ?></p>
+                <?php
+                $query = "SELECT d.id, d.id_pengunggah, d.judul FROM data_karya AS d JOIN users AS u ON d.id_pengunggah = $uid GROUP BY d.judul;";
+                $result = mysqli_query($conn, $query);
+                if(!$result){
+                die ("Query Error: ".mysqli_errno($conn).
+                " - ".mysqli_error($conn));
+                }
+               
+                while($row = mysqli_fetch_assoc($result))
+                {
+                    echo $row['judul'];
+                    echo $row['id'];
+                } 
+
+                ?>
+                <hr>
                 <form class="rating" method="POST" action="user-rating-proses" id="rateForm" enctype="multipart/form-data">
                     <label>
                         <input type="radio" name="rating" value="1" />
