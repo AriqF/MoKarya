@@ -20,7 +20,8 @@
                             <label class="label control-label">Anggota</label>
                             <input type="text" class="form-control" name="anggota" placeholder="pisahkan dengan koma jika anggota > 1" minlength="10" maxlength="28">
                             <label for="imageUpload">Unggah Foto Karya</label>
-                            <input name="foto_karya" type="file"  class="form-control-file" id="exampleFormControlFile1" style="cursor: pointer;">                          
+                            <input name="foto_karya" type="file"  class="form-control-file" id="exampleFormControlFile1" style="cursor: pointer;">  
+                            <input name="id_pengunggah" type="text" class="form-control" value="<?php echo $_SESSION['id']; ?>" hidden>                        
                             <div class="w-100"></div>
                             <button name="submit-btn" type="submit" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" style="margin-top: 10px; width: 30%; border-radius: 5px" >
                                 Unggah
