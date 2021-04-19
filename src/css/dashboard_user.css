@@ -57,6 +57,11 @@ tr td{
 .td-sm{
     width: 10%;
 }
+.btnGal{
+    min-width: 60% !important;
+    width: 60%;
+    max-width: 100%;
+}
 .gallery{
     min-height: 100vh;
     padding: 32px 32px;
@@ -77,9 +82,6 @@ tr td{
 }
 .separator{
     border-top: 1px solid #B3B1B2;
-}
-.btn-primary{
-    transform: translate(-15%, 0%);
 }
 input{
     width: 20%;
