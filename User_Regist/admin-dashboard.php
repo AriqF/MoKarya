@@ -35,6 +35,7 @@
 
     $rating5 = mysqli_query($conn, "SELECT rating FROM user_rating WHERE rating = 5");
     $totalR5 = mysqli_num_rows($rating5);
+    
 
 ?>
 
