@@ -12,7 +12,7 @@ $id = $_GET["id"];
       die ("Gagal menghapus data: ".mysqli_errno($conn).
        " - ".mysqli_error($conn));
     } else {
-      echo "<script>alert('Data berhasil dihapus.');window.location='unggah-karya';</script>";
+      echo "<script>alert('Data berhasil dihapus.');window.location='unggah-karya-data';</script>";
     }
 ?>
 
