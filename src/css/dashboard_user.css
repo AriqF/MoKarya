@@ -44,6 +44,19 @@ h2{
     color: black;
     background-color: #2e313c;
 }
+td, th{
+    vertical-align: middle;
+}
+th, tr, td{
+    color: white;
+    text-align: center;
+}
+tr td{
+    max-width: 50px;
+}
+.td-sm{
+    width: 10%;
+}
 .gallery{
     min-height: 100vh;
     padding: 32px 32px;
@@ -73,7 +86,7 @@ input{
     margin-bottom: 10px;
 }
 #box{
-    background-color: #9D31F0;
+    background-color: #533ea8;
     width: 90%;
     padding: 20px;
     border-radius: 12px; 

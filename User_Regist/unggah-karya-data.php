@@ -8,7 +8,7 @@
     <div class="container animwo mw-100" id="box" style=" color:white; padding-top: 30px; margin-top: 40px;">
         <div class="row justify-content-md-center">
             <div class="col-md-auto">
-                <h1 style="text-align: center;" class="fadeInUp">Unggah Karya Data</h1>
+                <h1 style="text-align: center;" class="fadeInUp">Data Karya</h1>
                 <hr style="border-top: 1px solid white; margin-bottom: 10px; margin-top: 10px">
             <br>
             </div>
