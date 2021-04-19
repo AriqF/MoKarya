@@ -39,7 +39,7 @@
               <div class="row">
 
                 <?php
-                $query = "SELECT * FROM data_karya LIMIT $per_laman OFFSET $awal";
+                $query = "SELECT data_karya.*, users.namalengkap FROM data_karya JOIN users ON data_karya.id_pengunggah = users.id LIMIT $per_laman OFFSET $awal";
                 $query_run = mysqli_query($conn, $query);
 
                 $check_data_karya = mysqli_num_rows($query_run) > 0;
@@ -80,12 +80,16 @@
                       <h5 class="modal-title" id="exampleModalLabel">Judul: <a class="text-dark"><?php echo $row_karya['judul']; ?></a></h5>
                       <hr>
                       <p class="small text-muted mb-0"> <!--Desc goes here -->
-                        <?php echo $row_karya['deskripsi'] ?>
-                        </p>
-                        <hr>
-                        <p class="small text-muted mb-0">
-                        <i class="fas fa-user-friends"></i> <?php echo $row_karya['anggota'] ?>
-                        </p>
+                      <?php echo $row_karya['deskripsi'] ?>
+                      </p>
+                      <hr>
+                      <p class="small text-muted mb-0">
+                      <i class="fas fa-user-friends"></i> <?php echo $row_karya['anggota'] ?>
+                      </p>
+                      <hr>
+                      <p class="small text-muted mb-0">
+                      Diunggah oleh: <?php echo $row_karya['namalengkap']; ?>
+                      </p>
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal" style="margin-right: 20px;">Close</button>
