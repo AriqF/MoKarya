@@ -20,6 +20,16 @@ body, html{
     margin: auto 6px;
     font-family: Helvetica;
 }
+.dropdown-item{
+    color: white;
+}
+.dropdown-item:hover{
+    background-color: #7A59E4;
+    color: white;
+}
+.dropdown-menu>.active{
+    background-color: #7A59E4;
+}
 li{
     cursor: pointer;
 }

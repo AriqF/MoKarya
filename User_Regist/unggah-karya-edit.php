@@ -2,12 +2,12 @@
     // $currentPage = 'uploadGallery_adm';
     // include 'header-admin.php';    
     
-    $currPage = 'unggah';
+    $currPage = 'edit';
     include 'header-user.php';
 
 
      // mengecek apakah di url ada nilai GET id
-  if (isset($_GET['id'])) {
+    if (isset($_GET['id'])) {
     // ambil nilai id dari url dan disimpan dalam variabel $id
     $id = ($_GET['id']);
 

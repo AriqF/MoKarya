@@ -23,7 +23,6 @@ if (!isset($_SESSION['id'])) {
     if($_SESSION['usertype'] == "admin"){
     header("location: 404");
 }
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -80,8 +79,14 @@ if (!isset($_SESSION['id'])) {
                 <li class="nav-item <?php if($currPage =='dashboard'){echo 'active';}?>">
                     <a class="nav-link" href="dashboard_user"><i class="fas fa-images"></i> Gallery</a>
                 </li>
-                <li class="nav-item <?php if($currPage =='unggah'){echo 'active';}?>">
-                    <a class="nav-link" href="unggah-karya"><i class="fas fa-upload"></i> Unggah</a>
+                <li class="nav-item dropdown dropdown-menu-dark <?php if($currPage =='data-karya' || $currPage =='unggah'){echo 'active';}?>">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-file-alt"></i> Karya
+                    </a>
+                    <div class="dropdown-menu" style="background-color: #4527a4;" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item <?php if($currPage =='unggah'){echo 'active';}?>"  href="unggah-karya"><i class="fas fa-upload"></i> Unggah</a>
+                        <a class="dropdown-item <?php if($currPage =='data-karya'){echo 'active';}?>"  href="unggah-karya-data"><i class="fas fa-list-alt"></i> Data Karya</a>
+                    </div>
                 </li>
                 <li class="nav-item <?php if($currPage =='profile'){echo 'active';}?>">
                     <a class="nav-link" href="profile-user"><i class="fas fa-id-card"></i> Profile</a>

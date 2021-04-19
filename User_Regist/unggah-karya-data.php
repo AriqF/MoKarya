@@ -1,8 +1,5 @@
 <?php
-    // $currentPage = 'galleryData';
-    // include 'header-admin.php';
-
-    $currPage = 'unggah';
+    $currPage = 'data-karya';
     include 'header-user.php';
 
     $uid = $_SESSION['id'];
