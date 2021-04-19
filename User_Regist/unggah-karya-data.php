@@ -44,10 +44,10 @@
                         <?php
 
                             // jalankan query untuk menampilkan semua data diurutkan berdasarkan nim
-                           $query = "SELECT d.id, d.id_pengunggah, d.judul, d.deskripsi, d.anggota, d.foto_karya FROM data_karya AS d JOIN users AS u ON d.id_pengunggah = $uid GROUP BY d.judul;";
+                           $query = "SELECT d.id, d.id_pengunggah, d.judul, d.deskripsi, d.anggota, d.foto_karya FROM data_karya AS d JOIN users AS u ON d.id_pengunggah = $uid GROUP BY d.judul ORDER BY id ASC;";
                             $result = mysqli_query($conn, $query);
                             if (isset($_POST['cari'])) {
-                                $result = mysqli_query($conn,"SELECT d.id, d.id_pengunggah, d.judul, d.deskripsi, d.anggota, d.foto_karya FROM data_karya AS d JOIN users AS u ON d.id_pengunggah = $uid WHERE d.judul LIKE '%".$_POST['cari']."%' OR d.anggota LIKE '%".$_POST['cari']."%' LIMIT 1"  );
+                                $result = mysqli_query($conn,"SELECT * FROM data_karya WHERE judul LIKE '%".$_POST['cari']."%' OR anggota LIKE '%".$_POST['cari']."%'"  );
                             }
                             //mengecek apakah ada error ketika menjalankan query
                             if(!$result){
