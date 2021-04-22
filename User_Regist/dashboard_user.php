@@ -39,7 +39,7 @@
               <div class="row">
 
                 <?php
-                $query = "SELECT data_karya.*, users.namalengkap FROM data_karya JOIN users ON data_karya.id_pengunggah = users.id LIMIT $per_laman OFFSET $awal";
+                $query = "SELECT data_karya.*, users.namalengkap FROM data_karya JOIN users ON data_karya.id_pengunggah = users.id ORDER BY id DESC LIMIT $per_laman OFFSET $awal";
                 $query_run = mysqli_query($conn, $query);
 
                 $check_data_karya = mysqli_num_rows($query_run) > 0;
