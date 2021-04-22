@@ -88,7 +88,14 @@
                       </p>
                       <hr>
                       <p class="small text-muted mb-0">
-                      Diunggah oleh: <?php echo $row_karya['namalengkap']; ?>
+                      Diunggah oleh: <?php
+                       if($row_karya['namalengkap'] == "mokarya"){
+                        echo "Admin";
+                       }
+                       else{
+                        echo $row_karya['namalengkap'];
+                       }
+                      ?>
                       </p>
                       </div>
                       <div class="modal-footer">
