@@ -1,11 +1,6 @@
 <?php
     require 'config/db.php';
 
-    // agar admin tidak bisa akses
-    if($_SESSION['usertype'] == "admin"){
-    header("location: 404");
-    }
-
     $rating  = $_POST['rating'];
     $komentar = $_POST['komentar'];
 
