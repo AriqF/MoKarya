@@ -1,11 +1,5 @@
 <?php
     require 'config/db.php';
-
-    // agar user tidak bisa akses
-    if($_SESSION['usertype'] == "user"){
-    header("location: 404");
-    }
-
     // membuat variabel untuk menampung data dari form
 
     if (isset($_POST['id']) || isset($_POST['namalengkap']) || isset($_POST['email']) || isset($_POST['nim']) || isset($_POST['angkatan']) || isset($_POST['kelas'])) {

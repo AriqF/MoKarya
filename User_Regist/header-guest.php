@@ -65,7 +65,7 @@
                     <a class="nav-link" href="login"><i class="fas fa-sign-in-alt"></i> Sign In</a>
                 </li>   
                 <li class="nav-item">
-                    <a class="nav-link" href="../index.php"><i class="fas fa-home"></i> Home</a>
+                    <a class="nav-link" href="../"><i class="fas fa-home"></i> Home</a>
                 </li>   
                 
                 

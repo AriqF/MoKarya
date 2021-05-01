@@ -1,11 +1,6 @@
 <?php
 require 'config/db.php';
 
-  // agar user tidak bisa akses
-  if($_SESSION['usertype'] == "user"){
-  header("location: 404");
-  }
-
 $id = $_GET["id"];
 
     //jalankan query DELETE untuk menghapus data

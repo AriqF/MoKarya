@@ -20,7 +20,8 @@ if (!isset($_SESSION['id'])) {
 }
 
 // agar admin tidak bisa akses
-    if($_SESSION['usertype'] == "admin"){
+error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
+if($_SESSION['usertype'] == "admin"){
     header("location: 404");
 }
 ?>
