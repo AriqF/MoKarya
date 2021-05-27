@@ -5,9 +5,6 @@ Oleh:
 2. M. Alif Hidayatullah (19051397065)
 3. Deni Eka Aji J.R (19051397038)
 
-catatan: File Rar ini merupakan file local dari computer (sudah berisikan database gallery)
-	Adapun jika ingin mendownload script murni tanpa database gallery bisa mengakses 
-	https://github.com/AriqF/MoKarya
 
 ## Cara menginstall website pada localhost
 1. Download file script yang ada pada github ini
