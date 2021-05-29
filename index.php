@@ -95,7 +95,7 @@
                     <tbody>
                       <tr>
                         <td>
-                          <img src="src/img/work.png" id="vector1" class="fadeInLeft img-fluid">
+                          <abbr title="Computer vector created by freepik - www.freepik.com"><img src="src/img/work.png" id="vector1" class="fadeInLeft img-fluid">  </abbr>
                         </td>
                       </tr>
                     </tbody>

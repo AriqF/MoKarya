@@ -86,7 +86,7 @@
                     <!--Image Box-->
                     <div class="col-md-6">
                         <div class="container" id="pictBox">
-
+                            
                         </div>
                     </div>
                 </div>
