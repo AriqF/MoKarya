@@ -10,8 +10,8 @@
   {
     while ($row_karya = mysqli_fetch_array($query_run)) {
 
-      $judulKarya[$i] = $row_karya['judul'];    
-        
+      $judulKarya[$i] = $row_karya['judul'];
+
       $foto_karya[$i] = $row_karya['foto_karya'];
       $i++;
     }
@@ -29,14 +29,15 @@
          <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        
+
+        <link rel="icon" type="image/png" href="src/img/mokarya-logo.png">
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-      
+
         <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-        
+
         <!--Swiper JS-->
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -46,7 +47,7 @@
 
         <!--My css-->
         <link rel="stylesheet" type="text/css" href="src/css/indexStyle.css"/>
-         
+
         <!--Google Fonts-->
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Epilogue&display=swap" rel="stylesheet">
@@ -62,7 +63,7 @@
         </style>
     </head> <!--#4527a4;-->
     <body>
-      
+
       <!--NavBar-->
       <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4527a4;">
         <a class="navbar-brand" href="#">MoKarya</a>
@@ -83,7 +84,7 @@
           </ul>
         </div>
       </nav>
-      <!--Header--> 
+      <!--Header-->
       <div class="content h-100">
         <div class="container h-100">
           <div class="row h-100 align-items-center">
@@ -134,7 +135,7 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide" id="img<?php echo 1?>"><?php echo $judulKarya[0]; ?></div> <!--nth-child(start from 4)--> <!--sliderPerView+1-->
             <div class="swiper-slide" id="img<?php echo 2?>"><?php echo $judulKarya[1]; ?></div>
-            <div class="swiper-slide" id="img<?php echo 3?>"><?php echo $judulKarya[2]; ?></div> 
+            <div class="swiper-slide" id="img<?php echo 3?>"><?php echo $judulKarya[2]; ?></div>
             <div class="swiper-slide" id="img<?php echo 4?>"><?php echo $judulKarya[3]; ?></div>
             <div class="swiper-slide" id="img<?php echo 5?>"><?php echo $judulKarya[4]; ?></div>
             <div class="swiper-slide" id="img<?php echo 6?>"><?php echo $judulKarya[5]; ?></div>
@@ -148,10 +149,10 @@
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
         </div>
-       
+
       </div>
-    
-      
+
+
       <div class="jumbotron footer fixed-footer" style="width: 100%; margin: 0">
         <div class="container-fluid text-center text-md-left">
             <div class="row">
@@ -167,13 +168,13 @@
                     <hr style="border-top: 1px solid white;">
                     <ul class="list-unstyled" style="color: #ffffff;">
                         <li>
-                            Ariq Fachry R         
+                            Ariq Fachry R
                         </li>
                         <li>
-                            Deni Eka Aji J R   
+                            Deni Eka Aji J R
                         </li>
                         <li>
-                            M. Alif Hidayatullah  
+                            M. Alif Hidayatullah
                         </li>
                     </ul>
                 </div>
@@ -224,5 +225,5 @@
         document.getElementById('img9').style.backgroundImage = "url(User_Regist/gambar/<?php echo $foto_karya[8]?>)";
       </script>
     </body>
-    
+
 </html>

@@ -1,6 +1,6 @@
-<?php 
+<?php
 
-require_once 'controllers/authController.php'; 
+require_once 'controllers/authController.php';
 
 // verify user token
 if (isset($_GET['token'])) {
@@ -34,15 +34,15 @@ if($_SESSION['usertype'] == "admin"){
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <!-- icon -->
-        <link rel="icon" type="image/png" href="../src/img/mokaya-icon.png">
-        
+        <link rel="icon" type="image/png" href="../src/img/mokaya-logo.png">
+
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-      
+
         <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-        
+
         <!--Swiper JS-->
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -51,8 +51,8 @@ if($_SESSION['usertype'] == "admin"){
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
         <!--My css-->
-        <link href="../src/css/dashboard_user.css" type="text/css" rel="stylesheet"> 
-        <link href="../src/css/user_ratingStyle.css" type="text/css" rel="stylesheet"> 
+        <link href="../src/css/dashboard_user.css" type="text/css" rel="stylesheet">
+        <link href="../src/css/user_ratingStyle.css" type="text/css" rel="stylesheet">
 
         <!--Swiper.js-->
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
@@ -62,8 +62,8 @@ if($_SESSION['usertype'] == "admin"){
         <script src="//cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
         <script src="sweetalert2.all.min.js"></script>
         <!-- Optional: include a polyfill for ES6 Promises for IE11 -->
-    
-         
+
+
         <!--Google Fonts-->
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Epilogue&display=swap" rel="stylesheet">
@@ -94,10 +94,10 @@ if($_SESSION['usertype'] == "admin"){
                 </li>
                 <li class="nav-item <?php if($currPage =='profile'){echo 'active';}?>">
                     <a class="nav-link" href="profile-user"><i class="fas fa-id-card"></i> Profile</a>
-                </li>        
+                </li>
                 <li class="nav-item <?php if($currPage =='user-rating'){echo 'active';}?>">
                     <a class="nav-link" href="user-rating"><i class="fas fa-star-half-alt"></i> Rate Us</a>
-                </li>         
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="index1?logout=1"><i class="fas fa-sign-out-alt"></i> Sign Out</a>
                 </li>

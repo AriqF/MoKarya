@@ -1,6 +1,6 @@
 <?php
 
-require_once 'controllers/authController.php'; 
+require_once 'controllers/authController.php';
 
 // verify user token
 if (isset($_GET['token'])) {
@@ -35,15 +35,15 @@ header("location: 404");
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <!-- icon -->
-        <link rel="icon" type="image/png" href="../src/img/mokaya-icon.png">
-        
+        <link rel="icon" type="image/png" href="../src/img/mokaya-logo.png">
+
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-      
+
         <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-        
+
         <!--Swiper JS-->
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -52,10 +52,10 @@ header("location: 404");
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
         <!--My css-->
-        <link href="../src/css/dashboard_admin.css" type="text/css" rel="stylesheet"> 
+        <link href="../src/css/dashboard_admin.css" type="text/css" rel="stylesheet">
 
         <script src="../src/js/galleryScript.js"></script>
-         
+
         <!--Google Fonts-->
         <link rel="preconnect" href="https://fonts.gstatic.com">
 
@@ -75,7 +75,7 @@ header("location: 404");
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark">
-            <a class="navbar-brand" href="#">Welcome, <?php echo $_SESSION['namalengkap']; ?> </a> 
+            <a class="navbar-brand" href="#">Welcome, <?php echo $_SESSION['namalengkap']; ?> </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -100,7 +100,7 @@ header("location: 404");
                     </li>
                     <li class="nav-item <?php if($currentPage =='admin-list-user-rating'){echo 'active';}?>">
                         <a class="nav-link" href="admin-list-user-rating"><i class="fas fa-star-half-alt"></i> Reviews</a>
-                    </li>   
+                    </li>
                     <li class="nav-item <?php if($currentPage =='profile'){echo 'active';}?>">
                         <a class="nav-link" href="admin-profile"><i class="fas fa-id-card"></i> Profile</a>
                     </li>
