@@ -10,7 +10,7 @@ require_once 'config/constants.php';
 // Create the Transport
 $transport = (new Swift_SmtpTransport('smtp.gmail.com', 465, 'ssl'))
   ->setUsername("mokaryad4@gmail.com")
-  ->setPassword("mokarya.123");
+  ->setPassword("riebjkzqysjihvql");
 
 // Create the Mailer using your created Transport
 $mailer = new Swift_Mailer($transport);
